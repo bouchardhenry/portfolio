@@ -3,5 +3,16 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem 2rem;
-  font-size: 0.85rem;
+  font-size: var(--font-size-nav);  /* keeps it consistent with nav */
+  color: var(--color-text-muted);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.footer * {
+  pointer-events: auto;
 }

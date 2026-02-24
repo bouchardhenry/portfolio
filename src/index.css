@@ -19,7 +19,7 @@
   --font-sans: 'Inter', Arial, sans-serif;
 
   /* Font sizes */
-  --font-size-nav: 10px;
+  --font-size-nav: 0.75rem;
   --font-size-sm: 0.75rem;    /* 12px */
   --font-size-base: 0.875rem; /* 14px */
   --font-size-md: 1rem;       /* 16px */

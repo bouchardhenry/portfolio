@@ -3,10 +3,18 @@
   align-items: start;
   flex-direction: column;
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;        /* changed from sticky — needs to stay on screen always */
   top: 0;
+  left: 0;                /* pin to left edge */
+  height: 100vh;          /* full height */
+  width: var(--nav-width);
   z-index: 100;
   gap: 2rem;
+  pointer-events: none;   /* clicks pass through empty nav space */
+}
+
+.navbar * {
+  pointer-events: auto;   /* re-enable clicks on links */
 }
 
 .logo {
@@ -26,7 +34,7 @@
 
 .links a {
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: var(--font-size-nav);   /* 10px as you wanted */
   transition: opacity 0.2s;
 }
 
@@ -36,4 +44,5 @@
 
 .active {
   font-weight: 600;
+  color: var(--color-accent);
 }
