@@ -19,8 +19,8 @@
 }
 
 .labyrinth {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Shared item styles */
@@ -34,34 +34,35 @@
 
 /* Top left — rotated up-right */
 .email {
-  top: 20%;
-  left: 18%;
+  top: 15%;
+  left: 8%;
   transform: rotate(35deg);
   transform-origin: bottom left;
 }
 
 /* Top right — rotated up-right */
 .phone {
-  top: 28%;
-  left: 70%;
+  top: 21%;
+  left: 80%;
   transform: rotate(-35deg);
   transform-origin: bottom left;
 }
 
 /* Bottom left — rotated down-left */
 .tagline {
-  top: 58%;
-  left: 16%;
+  top: 62%;
+  left: 6%;
   transform: rotate(-35deg);
   transform-origin: top left;
   letter-spacing: 0.15em;
-  font-size: 0.65rem;
+  font-size: var(--font-size-nav);
+  font-family: var(--font-serif);
 }
 
 /* Bottom right — social links stacked + rotated */
 .socials {
-  top: 51%;
-  left: 70%;
+  top: 55%;
+  left: 76%;
   transform: rotate(37deg);
   transform-origin: top left;
   display: flex;

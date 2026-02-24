@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem 2rem;
-  font-size: var(--font-size-nav);  /* keeps it consistent with nav */
   color: var(--color-text-muted);
   position: fixed;
   bottom: 0;

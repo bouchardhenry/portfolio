@@ -64,13 +64,13 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   padding-top: var(--spacing-lg);
 }
 
 .columnTitle {
   font-size: var(--font-size-md);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
 }
