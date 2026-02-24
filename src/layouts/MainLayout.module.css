@@ -1,0 +1,5 @@
+.main {
+  min-height: 100vh;
+  margin-left: var(--nav-width);
+  padding-bottom: var(--footer-height);
+}
