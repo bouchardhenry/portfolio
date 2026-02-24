@@ -1,5 +1,50 @@
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: var(--spacing-xl);
+.page {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Labyrinth centered in the content area */
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.labyrinth {
+  width: 540px;
+  height: 540px;
+}
+
+/* Fixed right column for the name */
+.nameColumn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--spacing-md);
+  gap: var(--spacing-lg);
+}
+
+.firstName,
+.lastName {
+  display: flex;
+  flex-direction: column;
+}
+
+.letter {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.letterMuted {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--color-text-muted);
 }

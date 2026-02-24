@@ -3,3 +3,76 @@
   margin: 0 auto;
   padding: var(--spacing-xl);
 }
+
+.page {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Labyrinth dead center */
+.center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.labyrinth {
+  width: 120px;
+  height: 120px;
+}
+
+/* Shared item styles */
+.item {
+  position: absolute;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+/* Top left — rotated up-right */
+.email {
+  top: 20%;
+  left: 18%;
+  transform: rotate(35deg);
+  transform-origin: bottom left;
+}
+
+/* Top right — rotated up-right */
+.phone {
+  top: 28%;
+  left: 70%;
+  transform: rotate(-35deg);
+  transform-origin: bottom left;
+}
+
+/* Bottom left — rotated down-left */
+.tagline {
+  top: 58%;
+  left: 16%;
+  transform: rotate(-35deg);
+  transform-origin: top left;
+  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+}
+
+/* Bottom right — social links stacked + rotated */
+.socials {
+  top: 51%;
+  left: 70%;
+  transform: rotate(37deg);
+  transform-origin: top left;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-md);
+}
+
+.socials a {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.socials a:hover {
+  color: var(--color-accent);
+}

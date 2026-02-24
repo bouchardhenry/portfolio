@@ -1,5 +1,83 @@
 .container {
-  max-width: 900px;
+  max-width: 970px;
+  max-height: 100vh;
   margin: 0 auto;
   padding: var(--spacing-xl);
+}
+
+.page {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  padding-top: var(--spacing-2xl);
+  max-width: 960px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Large faded labyrinth in background */
+.watermark {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 970px;
+  height: 970px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Everything above the watermark */
+.headline,
+.body,
+.grid {
+  position: relative;
+  z-index: 1;
+}
+
+.headline {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-text);
+  max-width: 700px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 640px;
+  font-weight: 300;
+}
+
+.body p {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* Bottom 3-column grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.columnTitle {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.column p {
+  font-size: var(--font-size-base);
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1.8;
 }
