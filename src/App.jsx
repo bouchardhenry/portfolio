@@ -22,11 +22,11 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path="projects/:slug" element={<ProjectDetail />} />
+          <Route path="digital-experience/:slug" element={<ProjectDetail />} />
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="info" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="digital-experience" element={<Projects />} />
         </Route>
       </Routes>
     </BrowserRouter>

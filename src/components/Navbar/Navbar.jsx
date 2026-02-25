@@ -11,8 +11,8 @@ export default function Navbar() {
         <img src={logo} alt="Home button" />
       </NavLink>
       <ul className={styles.links}>
-        <li><NavLink to="/projects" className={navLinkClass}>digital experiences</NavLink></li>
-        <li><NavLink to="/about" className={navLinkClass}>info</NavLink></li>
+        <li><NavLink to="/digital-experience" className={navLinkClass}>digital experiences</NavLink></li>
+        <li><NavLink to="/info" className={navLinkClass}>info</NavLink></li>
         <li><NavLink to="/contact" className={navLinkClass}>contact</NavLink></li>
       </ul>
     </nav>
