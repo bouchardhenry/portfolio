@@ -1,44 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Projects.module.css'
 import labyrinth from '../../assets/images/labyrint rouge.svg'
-
-const projects = [
-  {
-    slug: 'madreema-foundation',
-    title: 'MADREEMA FOUNDATION',
-    date: 'October 2025',
-    tags: 'Logo / Web Design',
-    align: 'right',
-  },
-  {
-    slug: 'halo-mind',
-    title: 'HALO MIND',
-    date: 'October 2025',
-    tags: 'Web Design / Developpement',
-    align: 'right',
-  },
-  {
-    slug: 'svea-vaccin',
-    title: 'SVEA VACCIN',
-    date: 'February 2026',
-    tags: 'Web Design / Developpement',
-    align: 'right',
-  },
-  {
-    slug: 'a-collective',
-    title: 'A COLLECTIVE',
-    date: 'April 2025',
-    tags: 'Logo / Web Design / Developpement',
-    align: 'right',
-  },
-  {
-    slug: 'blg-entertainement',
-    title: 'BLG ENTERTAINEMENT',
-    date: 'October 2025',
-    tags: 'Artistic Direction',
-    align: 'right',
-  },
-]
+import { projects } from '../../data/projects'
 
 export default function Projects() {
   return (
