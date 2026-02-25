@@ -28,15 +28,12 @@
 }
 
 .back {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
   letter-spacing: 0.05em;
-  transition: color var(--transition);
   align-self: flex-start;
 }
 
 .back:hover {
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }
 
 .headerInner {
@@ -53,16 +50,14 @@
 }
 
 .category {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   color: var(--color-accent);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .date {
-  font-size: var(--font-size-sm);
   color: var(--color-text-muted);
-  letter-spacing: 0.04em;
 }
 
 .title {
@@ -107,7 +102,7 @@
 }
 
 .description {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-size-lg);
   font-weight: 400;
   line-height: 1.75;
