@@ -55,8 +55,8 @@ export const projects = [
       'A clean, scannable content hierarchy with a redesigned booking flow that gets users to their appointment in under three clicks. Clinical precision without clinical coldness.',
     deliverables: ['UX Strategy', 'Web Design', 'React Development'],
     images: [
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&q=80',
-      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1400&q=80',
+      '/images/sveavaccin_img1.png',
+      '/images/sveavaccin_img2.png',
     ],
   },
   {
@@ -75,8 +75,8 @@ export const projects = [
       'A flexible identity system with a fixed typographic core and a variable colour palette that adapts to each member\'s work. The website is a living document, not a brochure.',
     deliverables: ['Logo & Identity System', 'Website Design', 'Front-end Development'],
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80',
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80',
+      '/images/acollective_img1.png',
+      '/images/acollective_img2.png',
     ],
   },
   {
@@ -95,8 +95,8 @@ export const projects = [
       'A core visual grammar — a specific use of type, contrast, and negative space — that scales from a phone screen to a 10-metre stage backdrop. Consistent energy, variable execution.',
     deliverables: ['Visual Direction', 'Campaign Design', 'Social & Print Assets'],
     images: [
-      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&q=80',
-      'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1400&q=80',
+      '/images/blg_img1.gif',
+      '/images/blg_img2.png',
     ],
   },
 ]

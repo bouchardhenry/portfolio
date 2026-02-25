@@ -80,15 +80,6 @@ export default function ProjectDetail() {
 
       </div>
 
-      {/* ── Next project ── */}
-      <footer className={styles.next}>
-        <p className={styles.nextLabel}>Next project</p>
-        <Link to={`/projects/${next.slug}`} className={styles.nextLink}>
-          <span className={styles.nextTitle}>{next.title}</span>
-          <span className={styles.nextMeta}>{next.tags}</span>
-        </Link>
-      </footer>
-
     </article>
   </div>
   )
