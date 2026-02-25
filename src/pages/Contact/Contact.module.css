@@ -31,8 +31,8 @@
 
 /* Top left — rotated up-right */
 .email {
-  top: 25%;
-  left: 8%;
+  top: 20%;
+  left: 18%;
   transform: rotate(35deg);
   transform-origin: bottom left;
 }
@@ -40,15 +40,15 @@
 /* Top right — rotated up-right */
 .phone {
   top: 31%;
-  left: 79%;
+  left: 69%;
   transform: rotate(-35deg);
   transform-origin: bottom left;
 }
 
 /* Bottom left — rotated down-left */
 .tagline {
-  top: 72%;
-  left: 6%;
+  top: 78%;
+  left: 18%;
   transform: rotate(-35deg);
   transform-origin: top left;
   letter-spacing: 0.15em;
@@ -59,7 +59,7 @@
 /* Bottom right — social links stacked + rotated */
 .socials {
   top: 64%;
-  left: 77%;
+  left: 67%;
   transform: rotate(37deg);
   transform-origin: top left;
   display: flex;
