@@ -2,18 +2,15 @@
   max-width: 900px;
   margin: 0 auto;
   padding: var(--spacing-xl);
-}
-
-.page {
-  min-height: 100vh;
-  overflow: hidden;
   position: relative;
+  min-height: 90dvh;
+  overflow: hidden;
 }
 
 /* Labyrinth dead center */
 .center {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -34,7 +31,7 @@
 
 /* Top left — rotated up-right */
 .email {
-  top: 15%;
+  top: 25%;
   left: 8%;
   transform: rotate(35deg);
   transform-origin: bottom left;
@@ -42,7 +39,7 @@
 
 /* Top right — rotated up-right */
 .phone {
-  top: 21%;
+  top: 31%;
   left: 79%;
   transform: rotate(-35deg);
   transform-origin: bottom left;
@@ -50,7 +47,7 @@
 
 /* Bottom left — rotated down-left */
 .tagline {
-  top: 62%;
+  top: 72%;
   left: 6%;
   transform: rotate(-35deg);
   transform-origin: top left;
@@ -61,7 +58,7 @@
 
 /* Bottom right — social links stacked + rotated */
 .socials {
-  top: 54%;
+  top: 64%;
   left: 77%;
   transform: rotate(37deg);
   transform-origin: top left;

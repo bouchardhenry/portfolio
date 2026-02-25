@@ -2,11 +2,11 @@
   max-width: 970px;
   margin: 0 auto;
   padding: var(--spacing-xl);
+  min-height: 93dvh;
 }
 
 .page {
   font-family: var(--font-sans);
-  min-height: 100vh;
   overflow: hidden;
   padding: var(--spacing-xl);
   padding-top: var(--spacing-2xl);
@@ -20,7 +20,7 @@
 /* Large faded labyrinth in background */
 .watermark {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 970px;

@@ -35,6 +35,7 @@
   --spacing-lg: 32px;
   --spacing-xl: 64px;
   --spacing-2xl: 120px;
+  --footer-height: 60px;
 
   /* Transitions */
   --transition: 200ms ease;
