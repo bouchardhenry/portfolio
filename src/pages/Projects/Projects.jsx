@@ -15,7 +15,7 @@ export default function Projects() {
             key={project.slug}
             className={`${styles.item} ${project.align === 'right' ? styles.right : styles.left}`}
           >
-            <Link to={`/projects/${project.slug}`} className={styles.link}>
+            <Link to={`/digital-experience/${project.slug}`} className={styles.link}>
               <h2 className={styles.title}>{project.title}</h2>
               <p className={styles.meta}>{project.date} / {project.tags}</p>
             </Link>

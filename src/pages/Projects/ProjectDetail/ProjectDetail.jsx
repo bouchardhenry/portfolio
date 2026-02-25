@@ -11,7 +11,7 @@ export default function ProjectDetail() {
       <div className={styles.container}>
         <div className={styles.notFound}>
           <p>Project not found.</p>
-          <Link to="/projects">← Back to projects</Link>
+          <Link to="/digital-experience">← Back to projects</Link>
         </div>
       </div>
     );
