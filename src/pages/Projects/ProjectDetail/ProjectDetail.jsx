@@ -24,7 +24,7 @@ export default function ProjectDetail() {
       <article className={styles.page}>
         {/* ── Header ── */}
         <header className={styles.header}>
-          <Link to="/projects" className={styles.back}>
+          <Link to="/digital-experience" className={styles.back}>
             &#x21a9; Back
           </Link>
           <div className={styles.headerInner}>
