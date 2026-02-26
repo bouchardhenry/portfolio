@@ -18,7 +18,11 @@ export const projects = [
       "Brand Guidelines",
       "Website Design",
     ],
-    images: ["/images/madreema_img1.png", "/images/madreema_img2.png"],
+    images: [
+      { src: "/images/madreema_fullpage.png", type: "tall" },
+      "/images/madreema_img1.png",
+      "/images/madreema_img2.png",
+    ],
   },
   {
     slug: "halo-mind",

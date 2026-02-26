@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getProjectBySlug, getAdjacentProject } from "../../../data/projects";
+import { getProjectBySlug } from "../../../data/projects";
 import styles from "./ProjectDetail.module.css";
+
+const normalizeImage = (img) =>
+  typeof img === "string" ? { src: img, type: "normal" } : img;
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   if (!project) {
     return (
@@ -19,7 +23,9 @@ export default function ProjectDetail() {
     );
   }
 
-  const next = getAdjacentProject(slug);
+  const images = project.images.map(normalizeImage);
+  const currentImage = images[currentIndex];
+  const isTall = currentImage.type === "tall";
 
   return (
     <div className={styles.container}>
@@ -39,21 +45,27 @@ export default function ProjectDetail() {
         </header>
 
         {/* ── Gallery ── */}
-        {project.images.length > 0 && (
+        {images.length > 0 && (
           <div className={styles.gallery}>
-            <div className={styles.galleryTrack}>
+            <div
+              className={isTall ? styles.galleryTrackTall : styles.galleryTrack}
+              onClick={isTall ? () => setLightboxOpen(true) : undefined}
+            >
               <img
-                src={project.images[currentIndex]}
+                src={currentImage.src}
                 alt={`${project.title} — ${currentIndex + 1}`}
               />
+              {isTall && (
+                <span className={styles.galleryZoomHint}>Click to view</span>
+              )}
             </div>
-            {project.images.length > 1 && (
+            {images.length > 1 && (
               <div className={styles.galleryControls}>
                 <button
                   className={styles.galleryBtn}
                   onClick={() =>
                     setCurrentIndex((i) =>
-                      i === 0 ? project.images.length - 1 : i - 1
+                      i === 0 ? images.length - 1 : i - 1
                     )
                   }
                   aria-label="Previous image"
@@ -63,13 +75,13 @@ export default function ProjectDetail() {
                   </svg>
                 </button>
                 <span className={styles.galleryCounter}>
-                  {currentIndex + 1} / {project.images.length}
+                  {currentIndex + 1} / {images.length}
                 </span>
                 <button
                   className={styles.galleryBtn}
                   onClick={() =>
                     setCurrentIndex((i) =>
-                      i === project.images.length - 1 ? 0 : i + 1
+                      i === images.length - 1 ? 0 : i + 1
                     )
                   }
                   aria-label="Next image"
@@ -124,6 +136,32 @@ export default function ProjectDetail() {
           </Link>
         </div>
       </article>
+
+      {/* ── Lightbox ── */}
+      {lightboxOpen && (
+        <div
+          className={styles.lightboxOverlay}
+          onClick={() => setLightboxOpen(false)}
+        >
+          <div
+            className={styles.lightboxInner}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={currentImage.src}
+              alt={`${project.title} — full`}
+              className={styles.lightboxImg}
+            />
+          </div>
+          <button
+            className={styles.lightboxClose}
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close lightbox"
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 }
