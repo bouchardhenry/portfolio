@@ -6,6 +6,34 @@ import styles from "./ProjectDetail.module.css";
 const normalizeImage = (img) =>
   typeof img === "string" ? { src: img, type: "normal" } : img;
 
+function GalleryImage({ src, alt, isTall }) {
+  const [loaded, setLoaded] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  const style = !loaded
+    ? { opacity: 0, transition: "none" }
+    : isTall
+    ? {
+        opacity: 1,
+        transform: hovered ? "translateY(-66.6%)" : "translateY(0)",
+        transition: hovered
+          ? "opacity 0.3s ease, transform 12s ease-in-out"
+          : "opacity 0.3s ease, transform 6s ease-in-out",
+      }
+    : { opacity: 1, transition: "opacity 0.3s ease" };
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      onLoad={() => setLoaded(true)}
+      onMouseEnter={isTall ? () => setHovered(true) : undefined}
+      onMouseLeave={isTall ? () => setHovered(false) : undefined}
+      style={style}
+    />
+  );
+}
+
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
@@ -26,6 +54,7 @@ export default function ProjectDetail() {
   const images = project.images.map(normalizeImage);
   const currentImage = images[currentIndex];
   const isTall = currentImage.type === "tall";
+  const isFit = currentImage.type === "fit";
 
   return (
     <div className={styles.container}>
@@ -33,11 +62,10 @@ export default function ProjectDetail() {
         {/* ── Header ── */}
         <header className={styles.header}>
           <Link to="/digital-experience" className={styles.back}>
-            &#x21a9; Back
+            ← Back
           </Link>
           <div className={styles.headerInner}>
             <div className={styles.headerMeta}>
-              <span className={styles.category}>{project.category}</span>
               <span className={styles.date}>{project.date}</span>
             </div>
             <h1 className={styles.title}>{project.title}</h1>
@@ -48,12 +76,20 @@ export default function ProjectDetail() {
         {images.length > 0 && (
           <div className={styles.gallery}>
             <div
-              className={isTall ? styles.galleryTrackTall : styles.galleryTrack}
+              className={
+                isTall
+                  ? styles.galleryTrackTall
+                  : isFit
+                  ? styles.galleryTrackFit
+                  : styles.galleryTrack
+              }
               onClick={isTall ? () => setLightboxOpen(true) : undefined}
             >
-              <img
+              <GalleryImage
+                key={currentIndex}
                 src={currentImage.src}
                 alt={`${project.title} — ${currentIndex + 1}`}
+                isTall={isTall}
               />
               {isTall && (
                 <span className={styles.galleryZoomHint}>Click to view</span>
@@ -111,9 +147,6 @@ export default function ProjectDetail() {
               </ul>
             </div>
           </div>
-
-          {/* Divider */}
-          <hr className={styles.rule} />
 
           {/* Challenge / Solution */}
           <div className={styles.caseStudy}>

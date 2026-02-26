@@ -19,9 +19,57 @@ export const projects = [
       "Website Design",
     ],
     images: [
-      { src: "/images/madreema_fullpage.png", type: "tall" },
-      "/images/madreema_img1.png",
-      "/images/madreema_img2.png",
+      { src: "/images/madreema_img (1).png", type: "tall" },
+      { src: "/images/madreema_img (2).png", type: "tall" },
+      "/images/Madreema.gif",
+    ],
+  },
+  {
+    slug: "svea-vaccin",
+    title: "SVEA VACCIN",
+    date: "February 2026",
+    tags: "Web Design & Developpement",
+    align: "right",
+    year: "2026",
+    category: "Web Design & Development",
+    description:
+      "Svea Vaccin is a Swedish healthcare provider offering travel vaccines and health consultations. The redesign focused on reducing friction and building confidence in the booking flow.",
+    challenge:
+      "Healthcare websites are often burdened with information architecture that serves the organisation, not the patient. The goal was to flip that — put the user's journey first.",
+    solution:
+      "A clean, scannable content hierarchy with a redesigned flow that gets users to their appointment in under three clicks. Clinical precision without clinical coldness.",
+    deliverables: ["UX Strategy", "Design", "Wordpress", "Web Development"],
+    images: [
+      "/images/sveavaccin_img1.png",
+      "/images/sveavaccin_img2.png",
+      "/images/sveavaccin_img3.png",
+      "/images/sveavaccin_img4.png",
+    ],
+  },
+  {
+    slug: "prisjakt",
+    title: "PRISJAKT",
+    date: "May 2025",
+    tags: "UX Analysis / App Redesign",
+    align: "right",
+    year: "2025",
+    category: "Interaction Design",
+    description:
+      "A proposed heuristic evaluation and redesign of the Prisjakt price comparison app — identifying usability failures across navigation, homepage, and list views, then resolving them through lo-fi and hi-fi prototypes I designed.",
+    challenge:
+      "The app suffered from poor brand recognition, cluttered information hierarchy, and friction-heavy interactions. Users took 14 seconds to locate categories — seven times longer than on competing platforms. The list feature obscured core conventions and made error recovery unnecessarily complex.",
+    solution:
+      "Applying Nielsen & Molich's 10 heuristics, I proposed a redesign of the homepage, mega-menu navigation, and favorites list. The proposition reintroduced Prisjakt's visual identity, elevated the search function, clarified the scanner feature, and reduced list management to two clicks.",
+    deliverables: [
+      "Heuristic Evaluation",
+      "Proposed Lo-fi Prototypes",
+      "Proposed Hi-fi Prototypes",
+    ],
+    images: [
+      "/images/prisjak_img (5).png",
+      "/images/prisjak_img (2).png",
+      "/images/prisjak_img (1).png",
+      "/images/prisjak_img (4).png",
     ],
   },
   {
@@ -41,23 +89,6 @@ export const projects = [
       "A light editorial layout built around generous whitespace and Libre Baskerville for warmth. Interactions are intentionally slow and unhurried, mirroring the product's ethos.",
     deliverables: ["Web Design", "Front-end Development", "Motion Design"],
     images: ["/images/halomind_img1.png", "/images/halomind_img2.png"],
-  },
-  {
-    slug: "svea-vaccin",
-    title: "SVEA VACCIN",
-    date: "February 2026",
-    tags: "Web Design & Developpement",
-    align: "right",
-    year: "2026",
-    category: "Web Design & Development",
-    description:
-      "Svea Vaccin is a Swedish healthcare provider offering travel vaccines and health consultations. The redesign focused on reducing friction and building confidence in the booking flow.",
-    challenge:
-      "Healthcare websites are often burdened with information architecture that serves the organisation, not the patient. The goal was to flip that — put the user's journey first.",
-    solution:
-      "A clean, scannable content hierarchy with a redesigned flow that gets users to their appointment in under three clicks. Clinical precision without clinical coldness.",
-    deliverables: ["UX Strategy", "Web Design", "Wordpress Development"],
-    images: ["/images/sveavaccin_img1.png", "/images/sveavaccin_img2.png"],
   },
   {
     slug: "a-collective",
@@ -82,6 +113,32 @@ export const projects = [
     images: ["/images/acollective_img1.png", "/images/acollective_img2.png"],
   },
   {
+    slug: "pokedex-explorer",
+    title: "POKÉDEX EXPLORER",
+    date: "November 2025",
+    tags: "Web Development / UI Design",
+    align: "right",
+    year: "2025",
+    category: "Front-End Development",
+    description:
+    "A retro-styled Pokémon encyclopedia I built showcasing all 151 original Generation 1 Pokémon. Combining Game Boy nostalgia with modern web development — powered by React and the PokéAPI.",
+    challenge:
+      "Translating a childhood aesthetic into a fully functional, responsive web app without losing the retro feel. The design had to evoke pixel-era gaming while remaining clean and navigable across all screen sizes.",
+      solution:
+      "I built the app with React and React Router, fetching live data from the PokéAPI. The interface uses Press Start 2P typography, animated sprites, and Game Boy-inspired card layouts. A responsive grid adapts from 5 columns on desktop down to 2 on mobile, and easter eggs — a shiny Mew in the footer, a spinning Masterball — reward curious users.",
+    deliverables: [
+      "Interactive Pokédex with dropdown search",
+      "Full gallery of all 151 Pokémon",
+      "Detailed individual Pokémon pages",
+      "Retro Game Boy UI Design",
+    ],
+    images: [
+      { src: "/images/pokemon_img (3).png", type: "fit" },
+      { src: "/images/pokemon_img (1).png", type: "fit" },
+      { src: "/images/pokemon_img (2).png", type: "fit" },
+    ],
+  },
+  {
     slug: "blg-entertainement",
     title: "BLG ENTERTAINEMENT",
     date: "October 2025",
@@ -90,51 +147,9 @@ export const projects = [
     year: "2025",
     category: "Artistic Direction",
     description:
-      "Artistic direction for BLG Entertainment — a European music house moving between shadow and spotlight. A study in presence across stage, screen, and silence.",
+      "Artistic direction for BLG Entertainment — Music house moving between screen and silence.",
     challenge:
-      "From intimate club rituals to festival-scale spectacle, BLG exists in constant contrast. The identity had to remain sovereign — composed, unmistakable — across every terrain.",
-    solution:
-      "A distilled visual language built on precision and restraint. Monumental typography, disciplined contrast, and intentional void. Designed to command a screen. Designed to inhabit a stage.",
-    deliverables: [
-      "Visual Direction",
-      "Campaign Design",
-      "Social & Print Assets",
-    ],
-    images: ["/images/blg_img1.gif", "/images/blg_img2.png"],
-  },
-  {
-    slug: "blg-entertainement",
-    title: "PRISJAKT",
-    date: "April 2025",
-    tags: "App Redisign",
-    align: "right",
-    year: "2025",
-    category: "Artistic Direction",
-    description:
-      "Artistic direction for BLG Entertainment — a European music house moving between shadow and spotlight. A study in presence across stage, screen, and silence.",
-    challenge:
-      "From intimate club rituals to festival-scale spectacle, BLG exists in constant contrast. The identity had to remain sovereign — composed, unmistakable — across every terrain.",
-    solution:
-      "A distilled visual language built on precision and restraint. Monumental typography, disciplined contrast, and intentional void. Designed to command a screen. Designed to inhabit a stage.",
-    deliverables: [
-      "Visual Direction",
-      "Campaign Design",
-      "Social & Print Assets",
-    ],
-    images: ["/images/blg_img1.gif", "/images/blg_img2.png"],
-  },
-  {
-    slug: "blg-entertainement",
-    title: "POKEDEX EXPLORER",
-    date: "April 2025",
-    tags: "Web Design & Developpement",
-    align: "right",
-    year: "2025",
-    category: "Artistic Direction",
-    description:
-      "Artistic direction for BLG Entertainment — a European music house moving between shadow and spotlight. A study in presence across stage, screen, and silence.",
-    challenge:
-      "From intimate club rituals to festival-scale spectacle, BLG exists in constant contrast. The identity had to remain sovereign — composed, unmistakable — across every terrain.",
+      "BLG exists in constant contrast. The identity had to remain sovereign — composed, unmistakable — across every terrain.",
     solution:
       "A distilled visual language built on precision and restraint. Monumental typography, disciplined contrast, and intentional void. Designed to command a screen. Designed to inhabit a stage.",
     deliverables: [

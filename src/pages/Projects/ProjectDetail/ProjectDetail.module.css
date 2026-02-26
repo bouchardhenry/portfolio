@@ -28,6 +28,8 @@
 }
 
 .back {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-lg);
   letter-spacing: 0.05em;
   align-self: flex-start;
 }
@@ -49,14 +51,8 @@
   align-items: center;
 }
 
-.category {
-  font-size: var(--font-size-md);
-  color: var(--color-accent);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .date {
+  font-size: var(--font-size-md);
   color: var(--color-text-muted);
 }
 
@@ -80,14 +76,26 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid #e8e6e6;
+  border: 1px solid #e0dede;
 }
 
 .galleryTrack img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease;
+}
+
+/* ── Fit image (natural proportions, no crop) ── */
+.galleryTrackFit {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e0dede;
+}
+
+.galleryTrackFit img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .galleryControls {
@@ -100,21 +108,20 @@
 
 .galleryBtn {
   background: none;
-  border: 1px solid #e8e6e6;
+  border: none;
   color: var(--color-text);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: border-color var(--transition), color var(--transition);
-  margin: var(--spacing-md);
+  opacity: 0.5;
+  transition: opacity var(--transition);
 }
 
 .galleryBtn:hover {
-  border-color: var(--color-text);
+  opacity: 1;
 }
 
 .galleryCounter {
@@ -128,7 +135,7 @@
 
 /* ── CTA ── */
 .cta {
-  padding-top: calc(var(--spacing-xl) * 3);
+  padding-top: calc(var(--spacing-lg) * 3);
 }
 
 .ctaLink {
@@ -140,15 +147,11 @@
   transition: opacity var(--transition);
 }
 
-.ctaLink:hover {
-  opacity: 0.5;
-}
-
 /* ── Body ── */
 .body {
   max-width: 1080px;
   display: flex;
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-sm);
   flex-direction: column;
   gap: var(--spacing-xl);
 }
@@ -195,18 +198,7 @@
   font-size: var(--font-size-base);
   color: var(--color-text);
   padding: var(--spacing-xs) 0;
-  border-bottom: 1px solid #e8e6e6;
   line-height: 1.4;
-}
-
-.deliverablesList li:first-child {
-  border-top: 1px solid #e8e6e6;
-}
-
-/* ── Rule ── */
-.rule {
-  border: none;
-  border-top: 1px solid #e8e6e6;
 }
 
 /* ── Case study blocks ── */
@@ -222,7 +214,6 @@
   gap: var(--spacing-md);
 }
 
-
 .caseProse {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
@@ -235,24 +226,17 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid #e8e6e6;
   cursor: zoom-in;
   position: relative;
+  border: 1px solid #e0dede;
 }
 
 .galleryTrackTall img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 0%;
-  animation: pagePan 14s ease-in-out infinite alternate;
+  height: auto;
+  display: block;
 }
 
-
-@keyframes pagePan {
-  0%, 8%   { object-position: 50% 0%;   }
-  92%, 100% { object-position: 50% 100%; }
-}
 
 .galleryZoomHint {
   position: absolute;
