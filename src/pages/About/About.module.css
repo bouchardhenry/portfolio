@@ -1,14 +1,14 @@
 .container {
   max-width: 970px;
   margin: 0 auto;
-  padding: var(--spacing-xl);
+  padding: var(--page-padding);
   min-height: 93dvh;
 }
 
 .page {
   font-family: var(--font-sans);
   overflow: hidden;
-  padding: var(--spacing-xl);
+  padding: var(--page-padding);
   padding-top: var(--spacing-2xl);
   max-width: 960px;
   position: relative;

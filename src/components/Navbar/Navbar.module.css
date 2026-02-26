@@ -2,14 +2,14 @@
   display: flex;
   align-items: start;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   position: fixed;        /* changed from sticky — needs to stay on screen always */
   top: 0;
   left: 0;                /* pin to left edge */
   height: 100vh;          /* full height */
   width: var(--nav-width);
   z-index: 100;
-  gap: 2rem;
+  gap: 2.2rem;
   pointer-events: none;   /* clicks pass through empty nav space */
 }
 

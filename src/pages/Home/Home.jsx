@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import labyrinth from '../../assets/images/labyrint.gif'
+import nameSvg from '../../assets/images/HB_rightside.png'
 
 export default function Home() {
   return (
@@ -10,19 +11,8 @@ export default function Home() {
         <img src={labyrinth} alt="labyrinth" className={styles.labyrinth} />
       </div>
 
-      {/* Right side vertical name */}
-      <div className={styles.nameColumn}>
-        <div className={styles.firstName}>
-          {'HENRY'.split('').map((letter, i) => (
-            <span key={i} className={styles.letter}>{letter}</span>
-          ))}
-        </div>
-        <div className={styles.lastName}>
-          {'BOUCHARD'.split('').map((letter, i) => (
-            <span key={i} className={styles.letterMuted}>{letter}</span>
-          ))}
-        </div>
-      </div>
+      {/* Right side name image */}
+      <img src={nameSvg} alt="Henry Bouchard" className={styles.nameImage} />
 
     </div>
   )

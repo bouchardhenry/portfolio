@@ -1,7 +1,7 @@
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: var(--spacing-xl);
+  padding: var(--page-padding);
   position: relative;
   height: 100dvh;
   overflow: hidden;

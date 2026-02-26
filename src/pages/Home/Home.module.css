@@ -19,35 +19,12 @@
   height: 600px;
 }
 
-/* Fixed right column for the name */
-.nameColumn {
+/* Fixed right side name image */
+.nameImage {
   position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--spacing-md);
-  gap: var(--spacing-lg);
-}
-
-.firstName,
-.lastName {
-  display: flex;
-  flex-direction: column;
-}
-
-.letter {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  font-weight: 400;
-  color: var(--color-text);
-}
-
-.letterMuted {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  font-weight: 400;
-  color: var(--color-text-muted);
+  right: var(--spacing-sm);
+  top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  height: calc(100dvh - var(--spacing-sm) * 2);
+  width: auto;
 }

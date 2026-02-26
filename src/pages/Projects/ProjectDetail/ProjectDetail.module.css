@@ -1,18 +1,29 @@
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: var(--spacing-xl);
+  padding: var(--page-padding);
 }
 
 /* ── Not found ── */
 .notFound {
-  padding: var(--spacing-xl);
+  padding: var(--page-padding);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
   color: var(--color-text-muted);
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
+}
+
+/* ── Labyrinth ── */
+.labyrinth {
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  width: 60px;
+  height: 60px;
+  opacity: 0.9;
+  z-index: 50;
 }
 
 /* ── Page ── */

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProjectBySlug } from "../../../data/projects";
 import styles from "./ProjectDetail.module.css";
+import labyrinth from "../../../assets/images/labyrint rouge.svg";
 
 const normalizeImage = (img) =>
   typeof img === "string" ? { src: img, type: "normal" } : img;
@@ -58,6 +59,7 @@ export default function ProjectDetail() {
 
   return (
     <div className={styles.container}>
+      <img src={labyrinth} alt="" className={styles.labyrinth} />
       <article className={styles.page}>
         {/* ── Header ── */}
         <header className={styles.header}>

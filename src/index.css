@@ -37,6 +37,9 @@
   --spacing-2xl: 120px;
   --footer-height: 60px;
 
+  /* Universal adaptive page padding — scales from 20px (mobile) to 64px (desktop) */
+  --page-padding: clamp(20px, 4vw, 64px);
+
   /* Transitions */
   --transition: 200ms ease;
 }
