@@ -28,3 +28,38 @@
   height: calc(100dvh - var(--spacing-sm) * 2);
   width: auto;
 }
+
+/* ── Tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page {
+    height: calc(100dvh - var(--mobile-nav-height));
+  }
+
+  .labyrinth {
+    width: 420px;
+    height: 420px;
+  }
+
+  .nameImage {
+    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+    height: calc(100dvh - var(--mobile-nav-height) - var(--spacing-md));
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .page {
+    height: calc(100dvh - var(--mobile-nav-height));
+  }
+
+  .labyrinth {
+    width: min(72vw, 280px);
+    height: min(72vw, 280px);
+  }
+
+  .nameImage {
+    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+    height: calc(50dvh - var(--mobile-nav-height));
+    padding: 0;
+  }
+}

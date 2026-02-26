@@ -2,3 +2,10 @@
   min-height: 100vh;
   margin-left: var(--nav-width);
 }
+
+@media (max-width: 1023px) {
+  .main {
+    margin-left: 0;
+    padding-top: var(--mobile-nav-height);
+  }
+}

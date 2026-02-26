@@ -80,3 +80,25 @@
   color: var(--color-text);
   line-height: 1.8;
 }
+
+/* ── Tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .page {
+    padding-top: var(--spacing-xl);
+    gap: var(--spacing-lg);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-md);
+  }
+}

@@ -44,3 +44,32 @@
   font-weight: 600;
   color: var(--color-accent);
 }
+
+/* ── Mobile & tablet: horizontal top bar ── */
+@media (max-width: 1023px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--mobile-nav-height);
+    padding: 0 var(--page-padding);
+    gap: 0;
+    background: var(--color-background);
+    pointer-events: auto;
+  }
+
+  .logo {
+    padding-right: 0;
+  }
+
+  .logo img {
+    height: 52px;
+    width: auto;
+  }
+
+  .links {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+}

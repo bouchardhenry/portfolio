@@ -59,3 +59,41 @@
   color: var(--color-text-muted);
   margin-top: var(--spacing-sm);
 }
+
+/* ── Tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .labyrinth {
+    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+  }
+
+  .list {
+    gap: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+  }
+
+  .item {
+    max-width: 90%;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .labyrinth {
+    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+    width: 40px;
+    height: 40px;
+  }
+
+  .list {
+    gap: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+  }
+
+  .item {
+    max-width: 100%;
+  }
+
+  .meta {
+    font-size: var(--font-size-base);
+  }
+}

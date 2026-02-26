@@ -75,3 +75,80 @@
 .socials a:hover {
   color: var(--color-accent);
 }
+
+/* ── Tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    height: calc(100dvh - var(--mobile-nav-height));
+  }
+
+  .labyrinth {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  /* Switch container to flex so normal flow takes over */
+  .container {
+    height: calc(100dvh - var(--mobile-nav-height));
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* The classless inner div spans full height as the flex column */
+  .container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing-lg) var(--page-padding);
+  }
+
+  /* Pull all items out of absolute positioning */
+  .item {
+    position: static;
+    transform: none;
+    font-size: var(--font-size-sm);
+  }
+
+  /* Labyrinth: centered in flow */
+  .center {
+    position: static;
+    transform: none;
+    align-self: center;
+  }
+
+  .labyrinth {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* email: top-left */
+  .email {
+    align-self: flex-start;
+  }
+
+  /* phone: top-right */
+  .phone {
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  /* tagline: bottom-left */
+  .tagline {
+    align-self: flex-start;
+    font-size: var(--font-size-nav);
+    transform: none;
+  }
+
+  /* socials: bottom-right */
+  .socials {
+    align-self: flex-end;
+    transform: none;
+    gap: var(--spacing-md);
+    justify-content: flex-end;
+  }
+}
