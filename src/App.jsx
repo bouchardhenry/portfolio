@@ -7,6 +7,7 @@ import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Projects from './pages/Projects/Projects'
 import ProjectDetail from './pages/Projects/ProjectDetail/ProjectDetail'
+import NotFound from './pages/NotFound/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="info" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="digital-experience" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
