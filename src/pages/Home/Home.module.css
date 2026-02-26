@@ -1,11 +1,14 @@
 .page {
-  max-height: 100dvh;
+  height: 100dvh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* Labyrinth centered in the content area */
 .center {
-  min-height: 90vh;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;

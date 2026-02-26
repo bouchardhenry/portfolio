@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: var(--spacing-xl);
   position: relative;
-  min-height: 90dvh;
+  height: 100dvh;
   overflow: hidden;
 }
 

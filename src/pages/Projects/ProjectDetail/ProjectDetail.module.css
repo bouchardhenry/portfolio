@@ -68,20 +68,80 @@
   color: var(--color-text);
 }
 
-/* ── Hero image ── */
-.heroImage {
+/* ── Gallery ── */
+.gallery {
   margin-top: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.galleryTrack {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid #e8e6e6;
 }
 
-.heroImage img {
+.galleryTrack img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 8s ease;
+  transition: opacity 0.3s ease;
+}
+
+.galleryControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.galleryBtn {
+  background: none;
+  border: 1px solid #e8e6e6;
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+  margin: var(--spacing-md);
+}
+
+.galleryBtn:hover {
+  border-color: var(--color-text);
+}
+
+.galleryCounter {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ── CTA ── */
+.cta {
+  padding-top: calc(var(--spacing-xl) * 3);
+}
+
+.ctaLink {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  line-height: 1;
+  transition: opacity var(--transition);
+}
+
+.ctaLink:hover {
+  opacity: 0.5;
 }
 
 /* ── Body ── */
@@ -113,16 +173,15 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
-  padding-top: 6px; /* optical alignment with serif baseline */
+  padding-top: 6px;
 }
 
-.deliverablesLabel {
+.sectionLabel {
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: var(--spacing-xs);
 }
 
 .deliverablesList {
@@ -163,13 +222,6 @@
   gap: var(--spacing-md);
 }
 
-.caseLabel {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
 
 .caseProse {
   font-family: var(--font-sans);
@@ -178,88 +230,10 @@
   line-height: 1.85;
 }
 
-/* ── Second image ── */
-.secondImage {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid #e8e6e6;
-}
-
-.secondImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 6s ease;
-}
-
-.secondImage:hover img {
-  transform: scale(1.02);
-}
-
-/* ── Next project ── */
-.next {
-  border-top: 1px solid #e8e6e6;
-  margin-top: var(--spacing-xl);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.nextLabel {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-top: var(--spacing-md);
-}
-
-.nextLink {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--spacing-lg);
-  transition: opacity var(--transition);
-}
-
-.nextLink:hover {
-  opacity: 0.5;
-}
-
-.nextTitle {
-  /* font-family: var(--font-serif); */
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--color-text);
-  line-height: 1;
-}
-
-.nextMeta {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  white-space: nowrap;
-}
-
-/* ── Animations ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .header { padding: var(--spacing-lg) var(--spacing-lg) 0; }
   .body { padding: var(--spacing-lg); }
   .intro { grid-template-columns: 1fr; gap: var(--spacing-lg); }
   .caseStudy { grid-template-columns: 1fr; gap: var(--spacing-lg); }
-  .nextLink { flex-direction: column; align-items: flex-start; gap: var(--spacing-xs); }
-  .next { padding: var(--spacing-lg); }
 }
