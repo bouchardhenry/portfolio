@@ -58,7 +58,7 @@
 
 /* Bottom right — social links stacked + rotated */
 .socials {
-  top: 59%;
+  top: 63%;
   left: 67%;
   transform: rotate(37deg);
   transform-origin: top left;
