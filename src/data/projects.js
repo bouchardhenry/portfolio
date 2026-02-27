@@ -19,8 +19,8 @@ export const projects = [
       "Website Design",
     ],
     images: [
-      { src: "/images/madreema_img (1).png", type: "tall" },
-      { src: "/images/madreema_img (2).png", type: "tall" },
+      { src: "/images/madreema_img (1).webp", type: "tall" },
+      { src: "/images/madreema_img (2).webp", type: "tall" },
       "/images/Madreema.gif",
     ],
   },
@@ -40,10 +40,10 @@ export const projects = [
       "A lean, direct interface built around clarity. Find your vaccine, locate your nearest clinic, walk in. Human in tone, clinical in precision. Zero dead ends.",
     deliverables: ["UX Strategy", "Design", "WordPress", "Web Development"],
     images: [
-      "/images/sveavaccin_img1.png",
-      "/images/sveavaccin_img2.png",
-      "/images/sveavaccin_img3.png",
-      "/images/sveavaccin_img4.png",
+      "/images/sveavaccin_img1.webp",
+      "/images/sveavaccin_img2.webp",
+      "/images/sveavaccin_img3.webp",
+      "/images/sveavaccin_img4.webp",
     ],
   },
   {
@@ -66,10 +66,10 @@ export const projects = [
       "Proposed Hi-fi Prototypes",
     ],
     images: [
-      "/images/prisjak_img (5).png",
-      "/images/prisjak_img (2).png",
-      "/images/prisjak_img (1).png",
-      "/images/prisjak_img (4).png",
+      "/images/prisjak_img (5).webp",
+      "/images/prisjak_img (2).webp",
+      "/images/prisjak_img (1).webp",
+      "/images/prisjak_img (4).webp",
     ],
   },
   {
@@ -88,7 +88,7 @@ export const projects = [
     solution:
       "A light editorial layout built around generous whitespace and Libre Baskerville for warmth. Interactions are intentionally slow and unhurried, mirroring the product's ethos.",
     deliverables: ["Web Design", "Front-end Development", "Motion Design"],
-    images: ["/images/halomind_img1.png", "/images/halomind_img2.png"],
+    images: ["/images/halomind_img1.webp", "/images/halomind_img2.webp"],
   },
   {
     slug: "a-collective",
@@ -110,7 +110,7 @@ export const projects = [
       "Social Media Strategy",
       "Content & Community Concept",
     ],
-    images: ["/images/acollective_img1.png", "/images/acollective_img2.png"],
+    images: ["/images/acollective_img1.webp", "/images/acollective_img2.webp"],
   },
   {
     slug: "pokedex-explorer",
@@ -133,9 +133,9 @@ export const projects = [
       "Retro Game Boy UI Design",
     ],
     images: [
-      { src: "/images/pokemon_img (3).png", type: "fit" },
-      { src: "/images/pokemon_img (1).png", type: "fit" },
-      { src: "/images/pokemon_img (2).png", type: "fit" },
+      { src: "/images/pokemon_img (3).webp", type: "fit" },
+      { src: "/images/pokemon_img (1).webp", type: "fit" },
+      { src: "/images/pokemon_img (2).webp", type: "fit" },
     ],
   },
   {
@@ -159,7 +159,7 @@ export const projects = [
       "Campaign Visuals",
       "Social & Print Assets",
     ],
-    images: ["/images/blg_img1.gif", "/images/blg_img2.png"],
+    images: ["/images/blg_img1.webp", "/images/blg_img2.webp"],
   },
 ];
 
