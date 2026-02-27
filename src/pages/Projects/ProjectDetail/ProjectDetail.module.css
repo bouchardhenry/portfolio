@@ -88,6 +88,8 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid #e0dede;
+  cursor: zoom-in;
+  position: relative;
 }
 
 .galleryTrack img {
@@ -101,6 +103,8 @@
   width: 100%;
   overflow: hidden;
   border: 1px solid #e0dede;
+  cursor: zoom-in;
+  position: relative;
 }
 
 .galleryTrackFit img {
@@ -212,6 +216,20 @@
   line-height: 1.4;
 }
 
+.siteLink {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: #7aafd4;
+  margin-top: var(--spacing-md);
+  display: inline-block;
+  transition: opacity var(--transition);
+}
+
+.siteLink:hover {
+  color: #7aafd4;
+  opacity: 0.7;
+}
+
 /* ── Case study blocks ── */
 .caseStudy {
   display: grid;
@@ -265,7 +283,9 @@
   transition: opacity 0.2s ease;
 }
 
-.galleryTrackTall:hover .galleryZoomHint {
+.galleryTrackTall:hover .galleryZoomHint,
+.galleryTrack:hover .galleryZoomHint,
+.galleryTrackFit:hover .galleryZoomHint {
   opacity: 1;
 }
 
@@ -300,18 +320,16 @@
   height: auto;
 }
 
-.lightboxClose {
+.lightboxClose,
+.lightboxPrev,
+.lightboxNext {
   position: fixed;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 20px;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -319,7 +337,28 @@
   transition: border-color 0.15s ease;
 }
 
-.lightboxClose:hover {
+.lightboxClose {
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.lightboxPrev {
+  top: 50%;
+  left: var(--spacing-md);
+  transform: translateY(-50%);
+}
+
+.lightboxNext {
+  top: 50%;
+  right: var(--spacing-md);
+  transform: translateY(-50%);
+}
+
+.lightboxClose:hover,
+.lightboxPrev:hover,
+.lightboxNext:hover {
   border-color: #fff;
 }
 

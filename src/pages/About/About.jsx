@@ -11,14 +11,14 @@ export default function About() {
 
       {/* Hero headline */}
       <h1 className={styles.headline}>
-        Developer and designer, guided by aesthetics, precision, and long-term vision
+        Developer and designer, guided by aesthetics, visual identity, and long-term vision
       </h1>
 
       {/* Body paragraphs */}
       <div className={styles.body}>
-        <p>Grounded in business and shaped by design, my work moved naturally toward development.</p>
-        <p>I believe web development can very human and thoughful. My work takes shape at the intersection of design, code, and intention.</p>
-        <p>Attention to quality, ongoing learning, gentle experimentation, and respect for users are quietly woven into the work.</p>
+        <p>Grounded in business and shaped by design, my work moved naturally toward development.
+        I believe web development can very human and thoughful. My work takes shape at the intersection of design, code, and intention.
+        Attention to quality, ongoing learning, gentle experimentation, and respect for users are quietly woven into the work.</p>
       </div>
 
       {/* Skills */}
@@ -26,11 +26,11 @@ export default function About() {
         <h3 className={styles.columnTitle}>Skills</h3>
         <div className={styles.skillRow}>
           <span className={styles.skillLabel}>Development</span>
-          <p>HTML / CSS · JavaScript · React · Node.js · REST APIs · Docker · Git</p>
+          <p>HTML / CSS · JavaScript · React · Tailwind · Node.js · REST APIs · SQL · PostgreSQL · WordPress · Git · Docker</p>
         </div>
         <div className={styles.skillRow}>
           <span className={styles.skillLabel}>Design</span>
-          <p>UX Design & Prototyping · Adobe Suite · 3D Design · Responsive Design · Web Design</p>
+          <p>UX Design & Prototyping · Web Design · Responsive Design · Figma · Adobe Suite · 3D Design</p>
         </div>
         <div className={styles.skillRow}>
           <span className={styles.skillLabel}>Business</span>
@@ -38,7 +38,7 @@ export default function About() {
         </div>
         <div className={styles.skillRow}>
           <span className={styles.skillLabel}>Learning</span>
-          <p className={styles.skillLearning}>TypeScript · Next.js · SQL · CMS</p>
+          <p className={styles.skillLearning}>TypeScript · Next.js · Three.js · Prisma · Python · CMS</p>
         </div>
       </div>
 
@@ -46,9 +46,9 @@ export default function About() {
       <div className={styles.grid}>
         <div className={styles.column}>
           <h3 className={styles.columnTitle}>Focus</h3>
-          <p>Visual Identity</p>
-          <p>Editorial Design</p>
-          <p>Digital Experience</p>
+          <p>Brand Identity</p>
+          <p>Web Design & Development</p>
+          <p>Art Direction</p>
         </div>
         <div className={styles.column}>
           <h3 className={styles.columnTitle}>Currently</h3>
