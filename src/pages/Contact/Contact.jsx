@@ -23,7 +23,7 @@ export default function Contact() {
 
       {/* Bottom left: tagline rotated */}
       <p className={`${styles.item} ${styles.tagline}`}>
-        NOT A FINGER<span style={{color: 'var(--color-accent)'}}>PRINT</span>
+        NOT A FINGERPRINT
       </p>
 
       {/* Bottom right: social links rotated */}
