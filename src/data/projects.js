@@ -30,7 +30,7 @@ export const projects = [
     tags: "Web Design · Development",
     align: "right",
     description:
-      "Svea Vaccin is Scandinavia's largest vaccination chain — 43 clinics, always drop-in, 30 years of expertise. The redesign made that confidence felt from the first click.",
+      "Svea Vaccin is Scandinavia's largest vaccination chain — 43 clinics, 30 years of expertise. The redesign made that confidence felt from the first click.",
     challenge:
       "A network this strong deserved a site that matched it. The old experience buried the essentials — patients arrived knowing what they needed and left without the information to act.",
     solution:
