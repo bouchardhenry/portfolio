@@ -111,10 +111,14 @@
 @media (max-width: 767px) {
   /* Switch container to flex so normal flow takes over */
   .container {
-    height: calc(100dvh - var(--mobile-nav-height));
+    height: calc(100dvh - var(--mobile-nav-height) - var(--footer-height));
     padding: 0;
     display: flex;
     flex-direction: column;
+  }
+
+  .arrow {
+    display: none;
   }
 
   /* The classless inner div spans full height as the flex column */

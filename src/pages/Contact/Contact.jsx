@@ -28,8 +28,8 @@ export default function Contact() {
 
       {/* Bottom right: social links rotated */}
       <div className={`${styles.item} ${styles.socials}`}>
-        <a href="https://github.com/bouchardhenry" target="_blank" rel="noreferrer">Github &#x2197;</a>
-        <a href="https://www.linkedin.com/in/henry-bouchard/" target="_blank" rel="noreferrer">LinkedIn &#x2197;</a>
+        <a href="https://github.com/bouchardhenry" target="_blank" rel="noreferrer">Github <span className={styles.arrow}>&#x2197;</span></a>
+        <a href="https://www.linkedin.com/in/henry-bouchard/" target="_blank" rel="noreferrer">LinkedIn <span className={styles.arrow}>&#x2197;</span></a>
       </div>
 
     </div>
