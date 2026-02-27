@@ -33,6 +33,7 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .page {
     height: calc(100dvh - var(--mobile-nav-height));
+    overscroll-behavior: none;
   }
 
   .labyrinth {
@@ -50,6 +51,8 @@
 @media (max-width: 767px) {
   .page {
     height: calc(100dvh - var(--mobile-nav-height));
+    touch-action: none;
+    overscroll-behavior: none;
   }
 
   .labyrinth {
