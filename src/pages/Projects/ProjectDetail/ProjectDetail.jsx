@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProjectBySlug } from "../../../data/projects";
 import styles from "./ProjectDetail.module.css";
@@ -57,6 +57,20 @@ export default function ProjectDetail() {
   const isTall = currentImage.type === "tall";
   const isFit = currentImage.type === "fit";
 
+  const prevImage = () => setCurrentIndex(i => i === 0 ? images.length - 1 : i - 1);
+  const nextImage = () => setCurrentIndex(i => i === images.length - 1 ? 0 : i + 1);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKey = (e) => {
+      if (e.key === "ArrowLeft")  prevImage();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "Escape")     setLightboxOpen(false);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxOpen, currentIndex]);
+
   return (
     <div className={styles.container}>
       <img src={labyrinth} alt="" className={styles.labyrinth} />
@@ -85,7 +99,7 @@ export default function ProjectDetail() {
                   ? styles.galleryTrackFit
                   : styles.galleryTrack
               }
-              onClick={isTall ? () => setLightboxOpen(true) : undefined}
+              onClick={() => setLightboxOpen(true)}
             >
               <GalleryImage
                 key={currentIndex}
@@ -93,9 +107,7 @@ export default function ProjectDetail() {
                 alt={`${project.title} — ${currentIndex + 1}`}
                 isTall={isTall}
               />
-              {isTall && (
-                <span className={styles.galleryZoomHint}>Click to view</span>
-              )}
+              <span className={styles.galleryZoomHint}>Click to view</span>
             </div>
             {images.length > 1 && (
               <div className={styles.galleryControls}>
@@ -137,9 +149,21 @@ export default function ProjectDetail() {
         <div className={styles.body}>
           {/* Description + deliverables */}
           <div className={styles.intro}>
-            <p className={styles.description}>
-              {project.description}
-            </p>
+            <div>
+              <p className={styles.description}>
+                {project.description}
+              </p>
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.siteLink}
+                >
+                  {project.urlLabel || project.url.replace(/^https?:\/\/(www\.)?/, "").replace(/[/#?].*$/, "")}
+                </a>
+              )}
+            </div>
             <div className={styles.deliverables}>
               <p className={styles.sectionLabel}>Scope of work</p>
               <ul className={styles.deliverablesList}>
@@ -195,6 +219,24 @@ export default function ProjectDetail() {
           >
             ×
           </button>
+          {images.length > 1 && (
+            <>
+              <button
+                className={styles.lightboxPrev}
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                aria-label="Previous image"
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+              <button
+                className={styles.lightboxNext}
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                aria-label="Next image"
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </>
+          )}
         </div>
       )}
     </div>
