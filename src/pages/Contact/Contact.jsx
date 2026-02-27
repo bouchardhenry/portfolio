@@ -23,13 +23,12 @@ export default function Contact() {
 
       {/* Bottom left: tagline rotated */}
       <p className={`${styles.item} ${styles.tagline}`}>
-        NOT A FINGERPRINT
+        NOT A FINGER<span style={{color: 'var(--color-accent)'}}>PRINT</span>
       </p>
 
       {/* Bottom right: social links rotated */}
       <div className={`${styles.item} ${styles.socials}`}>
         <a href="https://github.com/bouchardhenry" target="_blank" rel="noreferrer">Github &#x2197;</a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram &#x2197;</a>
         <a href="https://www.linkedin.com/in/henry-bouchard/" target="_blank" rel="noreferrer">LinkedIn &#x2197;</a>
       </div>
 

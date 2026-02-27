@@ -16,8 +16,8 @@
 }
 
 .labyrinth {
-  width: 150px;
-  height: 150px;
+  width: clamp(80px, 18dvh, 150px);
+  height: clamp(80px, 18dvh, 150px);
 }
 
 /* Shared item styles */
@@ -31,7 +31,7 @@
 
 /* Top left — rotated up-right */
 .email {
-  top: 20%;
+  top: 27%;
   left: 18%;
   transform: rotate(35deg);
   transform-origin: bottom left;
@@ -39,7 +39,7 @@
 
 /* Top right — rotated up-right */
 .phone {
-  top: 31%;
+  top: 36%;
   left: 69%;
   transform: rotate(-35deg);
   transform-origin: bottom left;
@@ -47,18 +47,18 @@
 
 /* Bottom left — rotated down-left */
 .tagline {
-  top: 78%;
+  top: 72%;
   left: 18%;
   transform: rotate(-35deg);
   transform-origin: top left;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   font-size: var(--font-size-nav);
   font-family: var(--font-serif);
 }
 
 /* Bottom right — social links stacked + rotated */
 .socials {
-  top: 64%;
+  top: 59%;
   left: 67%;
   transform: rotate(37deg);
   transform-origin: top left;
@@ -74,6 +74,25 @@
 
 .socials a:hover {
   color: var(--color-accent);
+}
+
+/* ── Short screens (laptops etc.) ── */
+@media (max-height: 700px) {
+  .email {
+    top: 12%;
+  }
+
+  .phone {
+    top: 22%;
+  }
+
+  .tagline {
+    top: 80%;
+  }
+
+  .socials {
+    top: 65%;
+  }
 }
 
 /* ── Tablet ── */
