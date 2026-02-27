@@ -89,7 +89,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
   padding-top: var(--spacing-lg);
 }
 
@@ -125,6 +125,21 @@
   .page {
     padding-top: var(--spacing-xl);
     gap: var(--spacing-lg);
+  }
+
+  .skillRow {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .skillLabel {
+    min-width: unset;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  .skillRow p {
+    font-size: var(--font-size-sm);
   }
 
   .grid {
