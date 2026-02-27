@@ -412,4 +412,15 @@
   .ctaLink {
     font-size: clamp(1.4rem, 6vw, 2rem);
   }
+
+  .galleryTrack,
+  .galleryTrackFit {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .galleryTrack .galleryZoomHint,
+  .galleryTrackFit .galleryZoomHint {
+    display: none;
+  }
 }
