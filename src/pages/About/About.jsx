@@ -17,7 +17,7 @@ export default function About() {
       {/* Body paragraphs */}
       <div className={styles.body}>
         <p>Grounded in business and shaped by design, my work moved naturally toward development.
-        I believe web development can very human and thoughful. My work takes shape at the intersection of design, code, and intention.
+        I believe web development can be very human and thoughful. My work takes shape at the intersection of design, code, and intention.
         Attention to quality, ongoing learning, gentle experimentation, and respect for users are quietly woven into the work.</p>
       </div>
 
