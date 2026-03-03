@@ -2,13 +2,17 @@
   max-width: 1080px;
   margin: 0 auto;
   padding: var(--page-padding);
+  min-height: calc(100dvh - var(--footer-height));
+  display: flex;
+  align-items: center;
 }
 
 .page {
   font-family: var(--font-sans);
   padding: var(--page-padding);
-  padding-top: var(--spacing-xl);
+  padding-top: 0;
   max-width: 1080px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -123,7 +127,6 @@
 /* ── Mobile ── */
 @media (max-width: 767px) {
   .page {
-    padding-top: var(--spacing-xl);
     gap: var(--spacing-lg);
   }
 
