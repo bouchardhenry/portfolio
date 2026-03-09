@@ -9,7 +9,7 @@
   height: 100vh;          /* full height */
   width: var(--nav-width);
   z-index: 100;
-  gap: 2.2rem;
+  gap: 3.3rem;
   pointer-events: none;   /* clicks pass through empty nav space */
 }
 
@@ -24,10 +24,11 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.3rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 0.3rem;
 }
 
 .links a {

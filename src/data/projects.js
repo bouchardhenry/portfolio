@@ -1,27 +1,52 @@
 export const projects = [
   {
-    slug: "madreema-foundation",
-    title: "MADREEMA FOUNDATION",
-    date: "October 2025",
-    tags: "Logo · Web Design",
+    slug: "newly",
+    title: "NEWLY",
+    date: "March 2026",
+    tags: "Web App · Product Design · Frontend Development",
     align: "right",
     description:
-      "A visual identity and digital presence for Madreema Foundation — an institution devoted to art, education, and remembrance. Defined by clarity, restraint, and considered silence.",
+      "Newly, formerly Natively, is an AI-driven web builder concept that blends a conversational interface with a live product workspace. It explores how natural language prompts can transition seamlessly into a structured environment for creating and publishing digital products.",
     challenge:
-      "To create an identity of permanence without symbolism, and elegance without excess. The foundation required an expression that could hold meaning quietly, across print, space, and screen.",
+      "To design a marketing experience that flows naturally into a full product interface without breaking the user’s sense of continuity. The system also needed to support complex visual interactions — glass morphism surfaces, animated transitions, and interactive grids — while maintaining high performance and clear architectural separation.",
     solution:
-      "A handwritten logotype balanced by an editorial typographic system and generous white space. The website was designed as a calm, structured surface — allowing art, purpose, and content to exist without interruption.",
-    url: "https://madreema.com",
+      "Built with Next.js 15 using route groups to fully separate the marketing site and product application. A custom two-phase transition connects the hero chat prompt to the builder interface, preserving the feeling that the user’s prompt directly becomes the product workspace. The interface is defined by a layered glass morphism design system, interactive bento grid physics, and a chat-driven builder UI — all optimized with compositor-friendly CSS animations and requestAnimationFrame event handling.",
+    url: "",
     deliverables: [
-      "Logo & Visual Identity",
-      "Brand Guidelines",
-      "Website Design",
+      "Product UI Design",
+      "Marketing Website",
+      "Frontend Architecture",
+      "Interactive Motion System",
+      "Design System",
     ],
     images: [
-      { src: "/images/madreema_img (1).webp", type: "tall" },
-      { src: "/images/madreema_img (2).webp", type: "tall" },
-      "/images/Madreema.gif",
+      { src: "/images/newly_img(2).webp", type: "tall" },
+      "/images/natively_img(1).png",
     ],
+  },
+{
+  slug: "madreema-foundation",
+  title: "MADREEMA FOUNDATION",
+  date: "October 2025",
+  tags: "Logo · Visual Identity · Web Design",
+  align: "right",
+  description:
+    "A visual identity and digital presence for Madreema Foundation — an institution devoted to art, education, and remembrance. The work is defined by clarity, restraint, and a quiet sense of permanence.",
+  challenge:
+    "To create an identity that conveys permanence without relying on symbolism, and elegance without excess. The foundation required a visual language capable of carrying meaning subtly across print, physical spaces, and digital platforms.",
+  solution:
+    "A handwritten logotype paired with a restrained editorial typographic system and generous white space. The website was designed as a calm, structured surface — allowing the foundation’s art, mission, and content to exist without visual interruption.",
+  url: "https://madreema.com",
+  deliverables: [
+    "Logo & Visual Identity",
+    "Brand Guidelines",
+    "Website Design"
+  ],
+  images: [
+    { src: "/images/madreema_img (1).webp", type: "tall" },
+    { src: "/images/madreema_img (2).webp", type: "tall" },
+    "/images/Madreema.gif"
+  ]
   },
   {
     slug: "svea-vaccin",

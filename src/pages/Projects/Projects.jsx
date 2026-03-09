@@ -7,7 +7,10 @@ export default function Projects() {
   return (
     <div className={styles.page}>
 
-      <img src={labyrinth} alt="" className={styles.labyrinth} />
+      <Link to="/contact" className={styles.labyrinthLink}>
+        <img src={labyrinth} alt="" className={styles.labyrinth} />
+        <p className={styles.labyrinthText}>Get in touch</p>
+      </Link>
 
       <ul className={styles.list}>
         {projects.map((project) => (
