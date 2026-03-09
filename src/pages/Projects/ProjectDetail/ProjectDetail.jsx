@@ -73,17 +73,19 @@ export default function ProjectDetail() {
 
   return (
     <div className={styles.container}>
-      <img src={labyrinth} alt="" className={styles.labyrinth} />
+      <Link to="/contact" className={styles.labyrinthLink}>
+        <img src={labyrinth} alt="" className={styles.labyrinth} />
+        <p className={styles.labyrinthText}>Get in touch</p>
+      </Link>
       <article className={styles.page}>
         {/* ── Header ── */}
         <header className={styles.header}>
-          <Link to="/digital-experience" className={styles.back}>
-            ← Back
-          </Link>
+          <nav className={styles.breadcrumb}>
+            <Link to="/digital-experience" className={styles.breadcrumbLink}>Digital Experiences</Link>
+            <span className={styles.breadcrumbSep}>/</span>
+            <span className={styles.breadcrumbCurrent}>{project.slug}</span>
+          </nav>
           <div className={styles.headerInner}>
-            <div className={styles.headerMeta}>
-              <span className={styles.date}>{project.date}</span>
-            </div>
             <h1 className={styles.title}>{project.title}</h1>
           </div>
         </header>
@@ -148,6 +150,7 @@ export default function ProjectDetail() {
         {/* ── Body ── */}
         <div className={styles.body}>
           {/* Description + deliverables */}
+          <p className={styles.dateValue}>{project.date}</p>
           <div className={styles.intro}>
             <div>
               <p className={styles.description}>
