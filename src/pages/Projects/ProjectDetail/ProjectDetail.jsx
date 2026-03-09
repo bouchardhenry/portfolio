@@ -194,7 +194,7 @@ export default function ProjectDetail() {
         {/* ── CTA ── */}
         <div className={styles.cta}>
           <Link to="/contact" className={styles.ctaLink}>
-            Get in touch →
+            &#8617; Digital Experience
           </Link>
         </div>
       </article>
