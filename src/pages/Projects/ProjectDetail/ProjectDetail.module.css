@@ -151,11 +151,6 @@
   justify-content: center;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity var(--transition);
-}
-
-.galleryBtn:hover {
-  opacity: 1;
 }
 
 .galleryCounter {
@@ -242,6 +237,13 @@
   line-height: 1.4;
 }
 
+.collaboratorLinks {
+  margin-top: var(--spacing-sm);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+
 .collaboratorLink {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
@@ -294,7 +296,6 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  cursor: zoom-in;
   position: relative;
   border: 1px solid #e0dede;
 }
@@ -320,13 +321,7 @@
   padding: 5px 10px;
   border: none;
   border-radius: 2px;
-  cursor: none;
-  pointer-events: all;
-  transition: background 0.2s ease;
-}
-
-.galleryZoomHint:hover {
-  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 /* ── Lightbox ── */

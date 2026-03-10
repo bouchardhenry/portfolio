@@ -7,20 +7,11 @@ import labyrinth from "../../../assets/images/labyrint rouge.svg";
 const normalizeImage = (img) =>
   typeof img === "string" ? { src: img, type: "normal" } : img;
 
-function GalleryImage({ src, alt, isTall }) {
+function GalleryImage({ src, alt }) {
   const [loaded, setLoaded] = useState(false);
-  const [hovered, setHovered] = useState(false);
 
   const style = !loaded
     ? { opacity: 0, transition: "none" }
-    : isTall
-    ? {
-        opacity: 1,
-        transform: hovered ? "translateY(-66.6%)" : "translateY(0)",
-        transition: hovered
-          ? "opacity 0.3s ease, transform 12s ease-in-out"
-          : "opacity 0.3s ease, transform 6s ease-in-out",
-      }
     : { opacity: 1, transition: "opacity 0.3s ease" };
 
   return (
@@ -28,8 +19,6 @@ function GalleryImage({ src, alt, isTall }) {
       src={src}
       alt={alt}
       onLoad={() => setLoaded(true)}
-      onMouseEnter={isTall ? () => setHovered(true) : undefined}
-      onMouseLeave={isTall ? () => setHovered(false) : undefined}
       style={style}
     />
   );
@@ -107,14 +96,13 @@ export default function ProjectDetail() {
                 key={currentIndex}
                 src={currentImage.src}
                 alt={`${project.title} — ${currentIndex + 1}`}
-                isTall={isTall}
               />
               <button
                 className={styles.galleryZoomHint}
                 onClick={(e) => { e.stopPropagation(); setLightboxOpen(true); }}
                 aria-label="View fullscreen"
               >
-                Click to view
+                Expand image
               </button>
             </div>
             {images.length > 1 && (
@@ -180,20 +168,6 @@ export default function ProjectDetail() {
                   <li key={d}>{d}</li>
                 ))}
               </ul>
-              {project.collaborators && (
-                <>
-                  <p className={styles.sectionLabel}>In collaboration with</p>
-                  <ul className={styles.deliverablesList}>
-                    {project.collaborators.map((c) => (
-                      <li key={c.name}>
-                        <a href={c.github} target="_blank" rel="noopener noreferrer" className={styles.collaboratorLink}>
-                          {c.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
             </div>
           </div>
 

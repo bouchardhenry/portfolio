@@ -102,16 +102,12 @@ export const projects = [
     description:
       "Halo Mind is a mental wellness platform designed for clarity and calm. The site needed to communicate trust and approachability without feeling clinical or sterile.",
     url: "https://productivity-app-six-phi.vercel.app/",
-    urlLabel: "halomind.vercel.app",
+    urlLabel: "halomind.app",
     challenge:
       "Mental health products often default to either cold medical aesthetics or overly soft pastels. Halo Mind needed a third path — warm, intelligent, and genuinely human.",
     solution:
       "A light editorial layout built around generous whitespace and Libre Baskerville for warmth. Interactions are intentionally slow and unhurried, mirroring the product's ethos.",
     deliverables: ["Web Design", "Front-end Development", "Motion Design"],
-    collaborators: [
-      { name: "Emmy Wennersten", github: "https://github.com/emmywennersten" },
-      { name: "Lucas Danneman", github: "https://github.com/lukasdannemann" },
-    ],
     images: ["/images/halomind_img1.webp", "/images/halomind_img2.webp"],
   },
   {
@@ -147,7 +143,7 @@ export const projects = [
     solution:
       "I built the app with React and React Router, fetching live data from the PokéAPI. The interface uses Press Start 2P typography, animated sprites, and Game Boy-inspired card layouts. A responsive grid adapts from 5 columns on desktop down to 2 on mobile, and easter eggs — a shiny Mew in the footer, a spinning Masterball — reward curious users.",
     url: "https://bouchardhenry.github.io/Pokemon-app-2/#/",
-    urlLabel: "pokedex.github.io",
+    urlLabel: "pokedex-explorer.io",
     deliverables: [
       "Interactive Pokédex with dropdown search",
       "Full gallery of all 151 Pokémon",
