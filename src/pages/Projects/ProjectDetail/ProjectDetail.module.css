@@ -306,15 +306,6 @@
 }
 
 
-.customCursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 10;
-}
-
 .galleryZoomHint {
   position: absolute;
   bottom: var(--spacing-sm);
