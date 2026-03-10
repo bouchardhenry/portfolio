@@ -1,29 +1,29 @@
 export const projects = [
-  {
-    slug: "newly",
-    title: "NEWLY",
-    date: "March 2026",
-    tags: "Frontend Development",
-    align: "right",
-    description:
-      "Newly, formerly Natively, is an AI-driven web builder concept that blends a conversational interface with a live product workspace. It explores how natural language prompts can transition seamlessly into a structured environment for creating and publishing digital products.",
-    challenge:
-      "To design a marketing experience that flows naturally into a full product interface without breaking the user’s sense of continuity. The system also needed to support complex visual interactions — glass morphism surfaces, animated transitions, and interactive grids — while maintaining high performance and clear architectural separation.",
-    solution:
-      "Built with Next.js 15 using route groups to fully separate the marketing site and product application. A custom two-phase transition connects the hero chat prompt to the builder interface, preserving the feeling that the user’s prompt directly becomes the product workspace. The interface is defined by a layered glass morphism design system, interactive bento grid physics, and a chat-driven builder UI — all optimized with compositor-friendly CSS animations and requestAnimationFrame event handling.",
-    url: "",
-    deliverables: [
-      "Product UI Design",
-      "Marketing Website",
-      "Frontend Architecture",
-      "Interactive Motion System",
-      "Design System",
-    ],
-    images: [
-      { src: "/images/newly_img1.webp", type: "tall" },
-      { src: "/images/natively_img1.webp", type: "tall" },
-    ],
-  },
+  // {
+  //   slug: "newly",
+  //   title: "NEWLY",
+  //   date: "March 2026",
+  //   tags: "Frontend Development",
+  //   align: "right",
+  //   description:
+  //     "Newly, formerly Natively, is an AI-driven web builder concept that blends a conversational interface with a live product workspace. It explores how natural language prompts can transition seamlessly into a structured environment for creating and publishing digital products.",
+  //   challenge:
+  //     "To design a marketing experience that flows naturally into a full product interface without breaking the user’s sense of continuity. The system also needed to support complex visual interactions — glass morphism surfaces, animated transitions, and interactive grids — while maintaining high performance and clear architectural separation.",
+  //   solution:
+  //     "Built with Next.js 15 using route groups to fully separate the marketing site and product application. A custom two-phase transition connects the hero chat prompt to the builder interface, preserving the feeling that the user’s prompt directly becomes the product workspace. The interface is defined by a layered glass morphism design system, interactive bento grid physics, and a chat-driven builder UI — all optimized with compositor-friendly CSS animations and requestAnimationFrame event handling.",
+  //   url: "",
+  //   deliverables: [
+  //     "Product UI Design",
+  //     "Marketing Website",
+  //     "Frontend Architecture",
+  //     "Interactive Motion System",
+  //     "Design System",
+  //   ],
+  //   images: [
+  //     { src: "/images/newly_img1.webp", type: "tall" },
+  //     { src: "/images/natively_img1.webp", type: "tall" },
+  //   ],
+  // },
 {
   slug: "madreema-foundation",
   title: "MADREEMA FOUNDATION",
