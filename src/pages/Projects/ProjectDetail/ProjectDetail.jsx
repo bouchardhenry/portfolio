@@ -40,6 +40,8 @@ export default function ProjectDetail() {
   const project = getProjectBySlug(slug);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+  const [cursorVisible, setCursorVisible] = useState(false);
 
   if (!project) {
     return (
@@ -101,6 +103,13 @@ export default function ProjectDetail() {
                   ? styles.galleryTrackFit
                   : styles.galleryTrack
               }
+              style={{ cursor: "none" }}
+              onMouseMove={(e) => {
+                const r = e.currentTarget.getBoundingClientRect();
+                setCursorPos({ x: e.clientX - r.left, y: e.clientY - r.top });
+              }}
+              onMouseEnter={() => setCursorVisible(true)}
+              onMouseLeave={() => setCursorVisible(false)}
               onClick={() => setLightboxOpen(true)}
             >
               <GalleryImage
@@ -109,7 +118,21 @@ export default function ProjectDetail() {
                 alt={`${project.title} — ${currentIndex + 1}`}
                 isTall={isTall}
               />
-              <span className={styles.galleryZoomHint}>Click to view</span>
+              {cursorVisible && (
+                <img
+                  src={labyrinth}
+                  className={styles.customCursor}
+                  style={{ left: cursorPos.x, top: cursorPos.y, width: 30, height: 30 }}
+                  aria-hidden="true"
+                />
+              )}
+              <button
+                className={styles.galleryZoomHint}
+                onClick={(e) => { e.stopPropagation(); setLightboxOpen(true); }}
+                aria-label="View fullscreen"
+              >
+                Click to view
+              </button>
             </div>
             {images.length > 1 && (
               <div className={styles.galleryControls}>
@@ -174,6 +197,20 @@ export default function ProjectDetail() {
                   <li key={d}>{d}</li>
                 ))}
               </ul>
+              {project.collaborators && (
+                <>
+                  <p className={styles.sectionLabel}>In collaboration with</p>
+                  <ul className={styles.deliverablesList}>
+                    {project.collaborators.map((c) => (
+                      <li key={c.name}>
+                        <a href={c.github} target="_blank" rel="noopener noreferrer" className={styles.collaboratorLink}>
+                          {c.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           </div>
 

@@ -58,7 +58,6 @@
   gap: var(--spacing-sm);
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
-  letter-spacing: 0.06em;
 }
 
 .breadcrumbLink {
@@ -163,7 +162,6 @@
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
-  letter-spacing: 0.08em;
   min-width: 40px;
   text-align: center;
 }
@@ -176,7 +174,6 @@
 .ctaLink {
   font-size: clamp(2rem, 4vw, 2rem);
   font-weight: 400;
-  letter-spacing: 0.06em;
   color: var(--color-text);
   line-height: 1;
   transition: opacity var(--transition);
@@ -245,6 +242,19 @@
   line-height: 1.4;
 }
 
+.collaboratorLink {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+
+.collaboratorLink:hover {
+  opacity: 0.6;
+}
+
 .siteLink {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
@@ -296,26 +306,36 @@
 }
 
 
+.customCursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
 .galleryZoomHint {
   position: absolute;
   bottom: var(--spacing-sm);
   right: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
-  color: #fff;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 3px 8px;
+  padding: 5px 10px;
+  border: none;
   border-radius: 2px;
-  letter-spacing: 0.04em;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  cursor: none;
+  pointer-events: all;
+  transition: background 0.2s ease;
 }
 
-.galleryTrackTall:hover .galleryZoomHint,
-.galleryTrack:hover .galleryZoomHint,
-.galleryTrackFit:hover .galleryZoomHint {
-  opacity: 1;
+.galleryZoomHint:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 /* ── Lightbox ── */

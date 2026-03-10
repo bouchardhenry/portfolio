@@ -108,6 +108,10 @@ export const projects = [
     solution:
       "A light editorial layout built around generous whitespace and Libre Baskerville for warmth. Interactions are intentionally slow and unhurried, mirroring the product's ethos.",
     deliverables: ["Web Design", "Front-end Development", "Motion Design"],
+    collaborators: [
+      { name: "Emmy Wennersten", github: "https://github.com/emmywennersten" },
+      { name: "Lucas Danneman", github: "https://github.com/lukasdannemann" },
+    ],
     images: ["/images/halomind_img1.webp", "/images/halomind_img2.webp"],
   },
   {

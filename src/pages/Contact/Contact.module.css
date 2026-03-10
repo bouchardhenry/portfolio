@@ -23,7 +23,7 @@
 /* Shared item styles */
 .item {
   position: absolute;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   color: var(--color-text);
   white-space: nowrap;
   transition: color var(--transition);
@@ -51,7 +51,6 @@
   left: 18%;
   transform: rotate(-35deg);
   transform-origin: top left;
-  letter-spacing: 0.1em;
   font-size: var(--font-size-nav);
   font-family: var(--font-serif);
 }

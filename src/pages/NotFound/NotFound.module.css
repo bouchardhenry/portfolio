@@ -17,7 +17,6 @@
   font-weight: 400;
   line-height: 1;
   color: var(--color-text);
-  letter-spacing: -0.02em;
 }
 
 .message {
@@ -29,6 +28,5 @@
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   color: var(--color-text);
-  letter-spacing: 0.04em;
   transition: opacity var(--transition);
 }
