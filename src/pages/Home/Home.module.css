@@ -19,13 +19,13 @@
   height: 600px;
 }
 
-/* Fixed right side name image */
+/* Right side name image — absolute within .page */
 .nameImage {
-  position: fixed;
+  position: absolute;
   right: var(--spacing-sm);
   top: var(--spacing-sm);
   padding: var(--spacing-sm);
-  height: calc(100dvh - var(--spacing-sm) * 2);
+  height: calc(100% - var(--spacing-sm) * 2);
   width: auto;
 }
 
@@ -42,8 +42,8 @@
   }
 
   .nameImage {
-    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
-    height: calc(100dvh - var(--mobile-nav-height) - var(--spacing-md));
+    top: var(--spacing-sm);
+    height: calc(100% - var(--spacing-md));
   }
 }
 
@@ -61,8 +61,8 @@
   }
 
   .nameImage {
-    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
-    height: calc(50dvh - var(--mobile-nav-height));
+    top: var(--spacing-sm);
+    height: 50%;
     padding: 0;
   }
 }

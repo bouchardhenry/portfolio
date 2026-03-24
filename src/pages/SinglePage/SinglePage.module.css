@@ -1,0 +1,6 @@
+/* Offset anchor scroll so content isn't hidden under the top navbar on mobile */
+@media (max-width: 1023px) {
+  .section {
+    scroll-margin-top: var(--mobile-nav-height);
+  }
+}

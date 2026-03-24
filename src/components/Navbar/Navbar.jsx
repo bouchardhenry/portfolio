@@ -1,19 +1,45 @@
-import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import logo from '../../assets/images/home_portfolio.svg'
 
 export default function Navbar() {
-  const navLinkClass = ({ isActive }) => isActive ? styles.active : ''
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+    const sections = ['home', 'digital-experience', 'info', 'contact']
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY + window.innerHeight / 3
+
+      for (const id of [...sections].reverse()) {
+        const el = document.getElementById(id)
+        if (el && el.offsetTop <= scrollY) {
+          setActiveSection(id)
+          return
+        }
+      }
+
+      setActiveSection('')
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const linkClass = (id) => activeSection === id ? styles.active : ''
 
   return (
     <nav className={styles.navbar}>
-      <NavLink to="/" className={styles.logo}>
+      <Link to={{ pathname: '/', hash: '#home' }} className={styles.logo}>
         <img src={logo} alt="Home button" />
-      </NavLink>
+      </Link>
       <ul className={styles.links}>
-        <li><NavLink to="/digital-experience" className={navLinkClass}>digital experience</NavLink></li>
-        <li><NavLink to="/info" className={navLinkClass}>info</NavLink></li>
-        <li><NavLink to="/contact" className={navLinkClass}>contact</NavLink></li>
+        <li><Link to={{ pathname: '/', hash: '#digital-experience' }} className={linkClass('digital-experience')}>digital experience</Link></li>
+        <li><Link to={{ pathname: '/', hash: '#info' }} className={linkClass('info')}>info</Link></li>
+        <li><Link to={{ pathname: '/', hash: '#contact' }} className={linkClass('contact')}>contact</Link></li>
       </ul>
     </nav>
   )

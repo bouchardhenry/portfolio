@@ -1,67 +1,70 @@
+import { motion } from 'motion/react'
 import styles from './About.module.css'
-import labyrinth from '../../assets/images/labyrint rouge.svg'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 18 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
+}
+
+const stagger = (delay = 0) => ({
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09, delayChildren: delay } },
+})
 
 export default function About() {
   return (
     <div className={styles.container}>
-      <div className={styles.page}>
+      <motion.div
+        className={styles.page}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        variants={stagger()}
+      >
 
-      {/* Background labyrinth watermark */}
-      <img src={labyrinth} alt="" className={styles.watermark} />
+        {/* Hero headline — first element in */}
+        <motion.h1 className={styles.headline} variants={fadeUp}>
+          Developer and designer, guided by aesthetics, visual identity, and long-term vision
+        </motion.h1>
 
-      {/* Hero headline */}
-      <h1 className={styles.headline}>
-        Developer and designer, guided by aesthetics, visual identity, and long-term vision
-      </h1>
+        {/* Body */}
+        <motion.div className={styles.body} variants={fadeUp}>
+          <p>Grounded in business and shaped by design, my work moved naturally toward development.
+          I believe web development can be very human and thoughful. My work takes shape at the intersection of design, code, and intention.
+          Attention to quality, ongoing learning, gentle experimentation, and respect for users are quietly woven into the work.</p>
+        </motion.div>
 
-      {/* Body paragraphs */}
-      <div className={styles.body}>
-        <p>Grounded in business and shaped by design, my work moved naturally toward development.
-        I believe web development can be very human and thoughful. My work takes shape at the intersection of design, code, and intention.
-        Attention to quality, ongoing learning, gentle experimentation, and respect for users are quietly woven into the work.</p>
-      </div>
+        {/* Skills — each row staggers in */}
+        <motion.div className={styles.skills} variants={stagger(0.05)}>
+          <motion.h3 className={styles.columnTitle} variants={fadeUp}>Skills</motion.h3>
+          {[
+            { label: 'Development', text: 'HTML / CSS · JavaScript · React · Tailwind · Node.js · REST APIs · SQL · PostgreSQL · WordPress · Git · Docker' },
+            { label: 'Design',      text: 'UX Design & Prototyping · Web Design · Responsive Design · Figma · Adobe Suite · 3D Design' },
+            { label: 'Business',    text: 'Financial Analysis · Business Strategy · Agile Methodology' },
+            { label: 'Learning',    text: 'TypeScript · Next.js · Three.js · Prisma · Python · CMS', muted: true },
+          ].map(({ label, text, muted }) => (
+            <motion.div key={label} className={styles.skillRow} variants={fadeUp}>
+              <span className={styles.skillLabel}>{label}</span>
+              <p className={muted ? styles.skillLearning : undefined}>{text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
 
-      {/* Skills */}
-      <div className={styles.skills}>
-        <h3 className={styles.columnTitle}>Skills</h3>
-        <div className={styles.skillRow}>
-          <span className={styles.skillLabel}>Development</span>
-          <p>HTML / CSS · JavaScript · React · Tailwind · Node.js · REST APIs · SQL · PostgreSQL · WordPress · Git · Docker</p>
-        </div>
-        <div className={styles.skillRow}>
-          <span className={styles.skillLabel}>Design</span>
-          <p>UX Design & Prototyping · Web Design · Responsive Design · Figma · Adobe Suite · 3D Design</p>
-        </div>
-        <div className={styles.skillRow}>
-          <span className={styles.skillLabel}>Business</span>
-          <p>Financial Analysis · Business Strategy · Agile Methodology</p>
-        </div>
-        <div className={styles.skillRow}>
-          <span className={styles.skillLabel}>Learning</span>
-          <p className={styles.skillLearning}>TypeScript · Next.js · Three.js · Prisma · Python · CMS</p>
-        </div>
-      </div>
+        {/* Info grid — columns stagger in */}
+        <motion.div className={styles.grid} variants={stagger(0.1)}>
+          {[
+            { title: 'Focus',     lines: ['Brand Identity', 'Web Design & Development', 'Art Direction'] },
+            { title: 'Currently', lines: ['Available for internship 2026/11/09 - 2027/04/23'] },
+            { title: 'Location',  lines: ['Stockholm, Sweden', 'Paris, France'] },
+          ].map(({ title, lines }) => (
+            <motion.div key={title} className={styles.column} variants={fadeUp}>
+              <h3 className={styles.columnTitle}>{title}</h3>
+              {lines.map(l => <p key={l}>{l}</p>)}
+            </motion.div>
+          ))}
+        </motion.div>
 
-      {/* Bottom info grid */}
-      <div className={styles.grid}>
-        <div className={styles.column}>
-          <h3 className={styles.columnTitle}>Focus</h3>
-          <p>Brand Identity</p>
-          <p>Web Design & Development</p>
-          <p>Art Direction</p>
-        </div>
-        <div className={styles.column}>
-          <h3 className={styles.columnTitle}>Currently</h3>
-          <p>Available for internship 2026/11/09 - 2027/04/23</p>
-        </div>
-        <div className={styles.column}>
-          <h3 className={styles.columnTitle}>Location</h3>
-          <p>Stockholm, Sweden</p>
-          <p>Paris, France</p>
-        </div>
-      </div>
-
-    </div>
+      </motion.div>
     </div>
   )
 }

@@ -4,16 +4,16 @@
   position: relative;
 }
 
-/* Labyrinth top right */
+/* Labyrinth top right — scoped to section */
 .labyrinthLink {
-  position: fixed;
+  position: absolute;
   top: var(--spacing-md);
   right: var(--spacing-md);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  z-index: 50;
+  z-index: 1;
 }
 
 .labyrinth {
@@ -77,7 +77,7 @@
 /* ── Tablet ── */
 @media (min-width: 768px) and (max-width: 1023px) {
   .labyrinthLink {
-    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+    top: var(--spacing-sm);
   }
 
   .list {
@@ -93,7 +93,7 @@
 /* ── Mobile ── */
 @media (max-width: 767px) {
   .labyrinthLink {
-    top: calc(var(--mobile-nav-height) + var(--spacing-sm));
+    top: var(--spacing-sm);
   }
 
   .labyrinth {

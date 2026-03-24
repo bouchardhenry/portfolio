@@ -128,3 +128,37 @@ img {
 ul, ol {
   list-style: none;
 }
+
+/* ================================
+   SCROLLBAR — macOS/iOS style
+================================ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(24, 24, 24, 0.28) transparent;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 24, 0.28);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 24, 24, 0.45);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

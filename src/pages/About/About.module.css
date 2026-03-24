@@ -2,7 +2,7 @@
   max-width: 1080px;
   margin: 0 auto;
   padding: var(--page-padding);
-  min-height: calc(100dvh - var(--footer-height));
+  min-height: 100dvh;
   display: flex;
   align-items: center;
 }
@@ -19,11 +19,11 @@
   gap: var(--spacing-lg);
 }
 
-/* Large faded labyrinth in background */
+/* Large faded labyrinth in background — scoped to section */
 .watermark {
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: min(90vw, 900px);
   height: min(90vw, 900px);

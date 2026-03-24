@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { motion } from "motion/react";
 import { getProjectBySlug } from "../../../data/projects";
 import styles from "./ProjectDetail.module.css";
 import labyrinth from "../../../assets/images/labyrint rouge.svg";
@@ -35,7 +36,7 @@ export default function ProjectDetail() {
       <div className={styles.container}>
         <div className={styles.notFound}>
           <p>Project not found.</p>
-          <Link to="/digital-experience">← Back to projects</Link>
+          <a href="/#digital-experience">← Back to projects</a>
         </div>
       </div>
     );
@@ -61,16 +62,21 @@ export default function ProjectDetail() {
   }, [lightboxOpen, currentIndex]);
 
   return (
-    <div className={styles.container}>
-      <Link to="/contact" className={styles.labyrinthLink}>
+    <motion.div
+      className={styles.container}
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
+      <a href="/#contact" className={styles.labyrinthLink}>
         <img src={labyrinth} alt="" className={styles.labyrinth} />
         <p className={styles.labyrinthText}>Get in touch</p>
-      </Link>
+      </a>
       <article className={styles.page}>
         {/* ── Header ── */}
         <header className={styles.header}>
           <nav className={styles.breadcrumb}>
-            <Link to="/digital-experience" className={styles.breadcrumbLink}>Digital Experiences</Link>
+            <a href="/#digital-experience" className={styles.breadcrumbLink}>Digital Experiences</a>
             <span className={styles.breadcrumbSep}>/</span>
             <span className={styles.breadcrumbCurrent}>{project.slug}</span>
           </nav>
@@ -187,9 +193,9 @@ export default function ProjectDetail() {
 
         {/* ── CTA ── */}
         <div className={styles.cta}>
-          <Link to="/contact" className={styles.ctaLink}>
+          <a href="/#digital-experience" className={styles.ctaLink}>
             &#8617; Digital Experience
-          </Link>
+          </a>
         </div>
       </article>
 
@@ -236,6 +242,6 @@ export default function ProjectDetail() {
           )}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
