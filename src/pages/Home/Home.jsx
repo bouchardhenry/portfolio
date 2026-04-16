@@ -1,23 +1,27 @@
 import { motion } from 'motion/react'
 import styles from './Home.module.css'
-import labyrinth from '../../assets/images/labyrint.gif'
+import labyrinth from '../../assets/images/thin labyrinth (1).svg'
 import nameSvg from '../../assets/images/HB_rightside.png'
 
 export default function Home() {
   return (
     <div className={styles.page}>
 
-      {/* Centered labyrinth — fades + scales in on mount */}
       <motion.div
         className={styles.center}
-        initial={{ opacity: 0, scale: 0.93 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <img src={labyrinth} alt="labyrinth" className={styles.labyrinth} />
+        <motion.img
+          src={labyrinth}
+          alt="labyrinth"
+          className={styles.labyrinth}
+          animate={{ rotateY: 360 }}
+          transition={{ duration: 8, ease: 'linear', repeat: Infinity }}
+        />
       </motion.div>
 
-      {/* Name image — slides in from the right */}
       <motion.img
         src={nameSvg}
         alt="Henry Bouchard"

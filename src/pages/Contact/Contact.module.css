@@ -75,23 +75,94 @@
   color: var(--color-accent);
 }
 
+/* ── Circle-expand dark reveal ── */
+.reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: var(--color-text);
+  clip-path: circle(0px at 50% 50%);
+  transition: clip-path 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.revealActive {
+  clip-path: circle(160% at 50% 50%);
+  pointer-events: auto;
+}
+
+/* Mirror the base layout — same positions, inverted colors */
+.ri {
+  position: absolute;
+  font-size: var(--font-size-base);
+  color: var(--color-background);
+  white-space: nowrap;
+  transition: color var(--transition);
+  text-decoration: none;
+}
+
+.ri:hover { color: var(--color-accent); }
+
+.rEmail {
+  top: 27%;
+  left: 18%;
+  transform: rotate(35deg);
+  transform-origin: bottom left;
+}
+
+.rPhone {
+  top: 36%;
+  left: 69%;
+  transform: rotate(-35deg);
+  transform-origin: bottom left;
+}
+
+.rCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.labyrinthInvert {
+  filter: invert(1);
+}
+
+.rTagline {
+  top: 72%;
+  left: 18%;
+  transform: rotate(-35deg);
+  transform-origin: top left;
+  font-size: var(--font-size-nav);
+  font-family: var(--font-serif);
+}
+
+.rSocials {
+  top: 63%;
+  left: 67%;
+  transform: rotate(37deg);
+  transform-origin: top left;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-lg);
+}
+
+.rSocials a {
+  font-size: var(--font-size-sm);
+  color: var(--color-background);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.rSocials a:hover { color: var(--color-accent); }
+
 /* ── Short screens (laptops etc.) ── */
 @media (max-height: 700px) {
-  .email {
-    top: 12%;
-  }
-
-  .phone {
-    top: 22%;
-  }
-
-  .tagline {
-    top: 80%;
-  }
-
-  .socials {
-    top: 65%;
-  }
+  .email, .rEmail   { top: 12%; }
+  .phone, .rPhone   { top: 22%; }
+  .tagline, .rTagline { top: 80%; }
+  .socials, .rSocials { top: 65%; }
 }
 
 /* ── Tablet ── */
