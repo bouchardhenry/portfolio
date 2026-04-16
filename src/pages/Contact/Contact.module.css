@@ -108,25 +108,29 @@
 
 /* ── Mobile ── */
 @media (max-width: 767px) {
-  /* Switch container to flex so normal flow takes over */
   .container {
-    height: calc(100dvh - var(--mobile-nav-height) - var(--footer-height));
-    padding: 0;
+    height: auto;
+    min-height: calc(100dvh - var(--mobile-nav-height));
+    padding: var(--spacing-xl) var(--page-padding) var(--spacing-lg);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
   }
 
   .arrow {
     display: none;
   }
 
-  /* The classless inner div spans full height as the flex column */
-  .container > div {
-    flex: 1;
+  /* The inner .page div: stacks all items in one column */
+  .page {
+    position: static;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: var(--spacing-lg) var(--page-padding);
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    width: 100%;
   }
 
   /* Pull all items out of absolute positioning */
@@ -134,13 +138,16 @@
     position: static;
     transform: none;
     font-size: var(--font-size-sm);
+    white-space: normal;
   }
 
-  /* Labyrinth: centered in flow */
+  /* Labyrinth: at the bottom, centered */
   .center {
     position: static;
     transform: none;
     align-self: center;
+    margin-top: var(--spacing-xl);
+    order: 99;
   }
 
   .labyrinth {
@@ -148,29 +155,18 @@
     height: 110px;
   }
 
-  /* email: top-left */
-  .email {
-    align-self: flex-start;
-  }
-
-  /* phone: top-right */
-  .phone {
-    align-self: flex-end;
-    text-align: right;
-  }
-
-  /* tagline: bottom-left */
+  .email { order: 1; }
+  .phone { order: 2; }
   .tagline {
-    align-self: flex-start;
+    order: 3;
     font-size: var(--font-size-nav);
     transform: none;
   }
 
-  /* socials: bottom-right */
   .socials {
-    align-self: flex-end;
+    order: 4;
     transform: none;
-    gap: var(--spacing-md);
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
 }
