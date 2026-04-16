@@ -141,13 +141,12 @@
     white-space: normal;
   }
 
-  /* Labyrinth: at the bottom, centered */
+  /* Labyrinth */
   .center {
     position: static;
     transform: none;
     align-self: center;
     margin-top: var(--spacing-xl);
-    order: 99;
   }
 
   .labyrinth {
@@ -157,16 +156,21 @@
 
   .email { order: 1; }
   .phone { order: 2; }
-  .tagline {
-    order: 3;
-    font-size: var(--font-size-nav);
-    transform: none;
-  }
 
   .socials {
-    order: 4;
+    order: 3;
     transform: none;
     flex-direction: column;
     gap: var(--spacing-sm);
+  }
+
+  .center { order: 4; }
+
+  .tagline {
+    order: 5;
+    font-size: var(--font-size-nav);
+    transform: none;
+    align-self: center;
+    margin-top: var(--spacing-sm);
   }
 }
