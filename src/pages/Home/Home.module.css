@@ -49,6 +49,10 @@
 
 /* ── Mobile ── */
 @media (max-width: 767px) {
+  .nameImage {
+    display: none;
+  }
+
   .page {
     height: calc(100dvh - var(--mobile-nav-height));
     overscroll-behavior: none;
