@@ -51,7 +51,6 @@
 @media (max-width: 767px) {
   .page {
     height: calc(100dvh - var(--mobile-nav-height));
-    touch-action: none;
     overscroll-behavior: none;
   }
 
