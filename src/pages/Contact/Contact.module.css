@@ -29,38 +29,38 @@
   transition: color var(--transition);
 }
 
-/* Top left — rotated up-right */
+/* Top left — X arm */
 .email {
-  top: 27%;
-  left: 18%;
-  transform: rotate(35deg);
+  top: 24%;
+  left: 10%;
+  transform: rotate(45deg);
   transform-origin: bottom left;
 }
 
-/* Top right — rotated up-right */
+/* Top right — X arm (mirror of email) */
 .phone {
-  top: 36%;
-  left: 69%;
-  transform: rotate(-35deg);
-  transform-origin: bottom left;
+  top: 24%;
+  right: 10%;
+  transform: rotate(-45deg);
+  transform-origin: bottom right;
 }
 
-/* Bottom left — rotated down-left */
+/* Bottom left — X arm (mirror of email vertically) */
 .tagline {
-  top: 72%;
-  left: 18%;
-  transform: rotate(-35deg);
+  bottom: 24%;
+  left: 10%;
+  transform: rotate(-45deg);
   transform-origin: top left;
   font-size: var(--font-size-nav);
   font-family: var(--font-serif);
 }
 
-/* Bottom right — social links stacked + rotated */
+/* Bottom right — X arm (mirror of phone vertically) */
 .socials {
-  top: 63%;
-  left: 67%;
-  transform: rotate(37deg);
-  transform-origin: top left;
+  bottom: 24%;
+  right: 10%;
+  transform: rotate(45deg);
+  transform-origin: top right;
   display: flex;
   flex-direction: row;
   gap: var(--spacing-lg);
@@ -75,94 +75,12 @@
   color: var(--color-accent);
 }
 
-/* ── Circle-expand dark reveal ── */
-.reveal {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  background: var(--color-text);
-  clip-path: circle(0px at 50% 50%);
-  transition: clip-path 0.7s cubic-bezier(0.76, 0, 0.24, 1);
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.revealActive {
-  clip-path: circle(160% at 50% 50%);
-  pointer-events: auto;
-}
-
-/* Mirror the base layout — same positions, inverted colors */
-.ri {
-  position: absolute;
-  font-size: var(--font-size-base);
-  color: var(--color-background);
-  white-space: nowrap;
-  transition: color var(--transition);
-  text-decoration: none;
-}
-
-.ri:hover { color: var(--color-accent); }
-
-.rEmail {
-  top: 27%;
-  left: 18%;
-  transform: rotate(35deg);
-  transform-origin: bottom left;
-}
-
-.rPhone {
-  top: 36%;
-  left: 69%;
-  transform: rotate(-35deg);
-  transform-origin: bottom left;
-}
-
-.rCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.labyrinthInvert {
-  filter: invert(1);
-}
-
-.rTagline {
-  top: 72%;
-  left: 18%;
-  transform: rotate(-35deg);
-  transform-origin: top left;
-  font-size: var(--font-size-nav);
-  font-family: var(--font-serif);
-}
-
-.rSocials {
-  top: 63%;
-  left: 67%;
-  transform: rotate(37deg);
-  transform-origin: top left;
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-lg);
-}
-
-.rSocials a {
-  font-size: var(--font-size-sm);
-  color: var(--color-background);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-.rSocials a:hover { color: var(--color-accent); }
-
 /* ── Short screens (laptops etc.) ── */
 @media (max-height: 700px) {
-  .email, .rEmail   { top: 12%; }
-  .phone, .rPhone   { top: 22%; }
-  .tagline, .rTagline { top: 80%; }
-  .socials, .rSocials { top: 65%; }
+  .email  { top: 8%; }
+  .phone  { top: 8%; }
+  .tagline { bottom: 8%; }
+  .socials { bottom: 8%; }
 }
 
 /* ── Tablet ── */
@@ -180,68 +98,27 @@
 /* ── Mobile ── */
 @media (max-width: 767px) {
   .container {
-    height: auto;
-    min-height: calc(100dvh - var(--mobile-nav-height));
-    padding: var(--spacing-xl) var(--page-padding) var(--spacing-lg);
+    height: calc(100dvh - var(--mobile-nav-height));
+    padding: 0;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-md);
+  }
+
+  .item {
+    font-size: var(--font-size-sm);
+  }
+
+  .labyrinth {
+    width: 90px;
+    height: 90px;
   }
 
   .arrow {
     display: none;
   }
 
-  /* The inner .page div: stacks all items in one column */
-  .page {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-md);
-    width: 100%;
-  }
-
-  /* Pull all items out of absolute positioning */
-  .item {
-    position: static;
-    transform: none;
-    font-size: var(--font-size-sm);
-    white-space: normal;
-  }
-
-  /* Labyrinth */
-  .center {
-    position: static;
-    transform: none;
-    align-self: center;
-    margin-top: var(--spacing-xl);
-  }
-
-  .labyrinth {
-    width: 110px;
-    height: 110px;
-  }
-
-  .email { order: 1; }
-  .phone { order: 2; }
-
+  /* Stack socials vertically so the arm doesn't get too wide */
   .socials {
-    order: 3;
-    transform: none;
     flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .center { order: 4; }
-
-  .tagline {
-    order: 5;
-    font-size: var(--font-size-nav);
-    transform: none;
-    align-self: center;
-    margin-top: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 }
