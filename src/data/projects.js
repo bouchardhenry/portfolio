@@ -20,8 +20,36 @@ export const projects = [
       "Design System",
     ],
     images: [
-      { src: "/images/newly_img1.webp", type: "tall" },
+      { src: "/images/newly_img1.png", type: "tall" },
       { src: "/images/natively_img1.webp", type: "tall" },
+    ],
+  },
+{
+    slug: "sole-search",
+    title: "SOLE SEARCH",
+    date: "April 2026",
+    tags: "Full Stack Development · Database Architecture · Design",
+    align: "right",
+    description:
+      "Sole Search is a fictive full-stack e-commerce platform built for sneaker culture — from product browsing and cart management to checkout and order tracking. Every layer of the stack, from database schema to UI, was designed and built in-house.",
+    challenge:
+      "Building a production-ready webshop requires more than a storefront. The architecture had to support real-time inventory, a clean product catalog, secure transactions, and a consistent experience across frontend and backend — without reaching for a platform like Shopify as a crutch.",
+    solution:
+      "Designed and implemented the full system end-to-end: a relational database architecture optimized for product variants and stock, a REST backend handling auth, orders, and inventory, and a React frontend with a sharp editorial aesthetic. The result is a cohesive, performant webshop built entirely from scratch.",
+    url: "https://webbshop-2026-fe.vercel.app/",
+    urlLabel: "sole-search.app",
+    deliverables: [
+      "UI/UX Design",
+      "Frontend Development",
+      "Backend Development",
+      "Database Architecture",
+      "REST API",
+    ],
+    images: [
+      { src: "/images/sole_search-img (4).png", type: "top" },
+      "/images/sole_search-img (3).png",
+      "/images/sole_search-img (1).png",
+      "/images/sole_search-img (2).png",
     ],
   },
 {

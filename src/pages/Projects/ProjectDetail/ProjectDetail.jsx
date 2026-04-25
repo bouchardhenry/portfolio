@@ -46,6 +46,7 @@ export default function ProjectDetail() {
   const currentImage = images[currentIndex];
   const isTall = currentImage.type === "tall";
   const isFit = currentImage.type === "fit";
+  const isTop = currentImage.type === "top";
 
   const prevImage = () => setCurrentIndex(i => i === 0 ? images.length - 1 : i - 1);
   const nextImage = () => setCurrentIndex(i => i === images.length - 1 ? 0 : i + 1);
@@ -94,6 +95,8 @@ export default function ProjectDetail() {
                   ? styles.galleryTrackTall
                   : isFit
                   ? styles.galleryTrackFit
+                  : isTop
+                  ? styles.galleryTrackTop
                   : styles.galleryTrack
               }
               onClick={() => setLightboxOpen(true)}
