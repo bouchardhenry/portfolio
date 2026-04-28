@@ -28,7 +28,9 @@ export default function Projects() {
           >
             <Link to={`/digital-experience/${project.slug}`} className={styles.link}>
               <h2 className={styles.title}>{project.title}</h2>
-              <p className={styles.meta}>{project.date} / {project.tags}</p>
+              <p className={styles.meta}>
+                {project.date} / {project.tags.join(' · ')}
+              </p>
             </Link>
           </motion.li>
         ))}

@@ -3,7 +3,7 @@ export const projects = [
     slug: "newly",
     title: "NEWLY",
     date: "March 2026",
-    tags: "Frontend Development",
+    tags: ["Frontend Development"],
     align: "right",
     description:
       "Newly, formerly Natively, is an AI-driven web builder concept that blends a conversational interface with a live product workspace. It explores how natural language prompts can transition seamlessly into a structured environment for creating and publishing digital products.",
@@ -28,7 +28,7 @@ export const projects = [
     slug: "sole-search",
     title: "SOLE SEARCH",
     date: "April 2026",
-    tags: "Full Stack Development · Database Architecture · Design",
+    tags: ["Full Stack", "Database", "Design"],
     align: "right",
     description:
       "Sole Search is a fictive full-stack e-commerce platform built for sneaker culture — from product browsing and cart management to checkout and order tracking. Every layer of the stack, from database schema to UI, was designed and built in-house.",
@@ -56,7 +56,7 @@ export const projects = [
   slug: "madreema-foundation",
   title: "MADREEMA FOUNDATION",
   date: "October 2025",
-  tags: "Logo · Visual Identity · Web Design",
+  tags: ["Logo", "Visual Identity", "Web Design"],
   align: "right",
   description:
     "A visual identity and digital presence for Madreema Foundation — an institution devoted to art, education, and remembrance. The work is defined by clarity, restraint, and a quiet sense of permanence.",
@@ -80,7 +80,7 @@ export const projects = [
     slug: "svea-vaccin",
     title: "SVEA VACCIN",
     date: "February 2026",
-    tags: "Web Design · Development",
+    tags: ["Web Design", "Development"],
     align: "right",
     description:
       "Svea Vaccin is Scandinavia's largest vaccination chain — 43 clinics, 30 years of expertise. The redesign made that confidence felt from the first click.",
@@ -101,7 +101,7 @@ export const projects = [
     slug: "prisjakt",
     title: "PRISJAKT",
     date: "May 2025",
-    tags: "UX Analysis · App Redesign",
+    tags: ["UX Analysis", "App Redesign"],
     align: "right",
     description:
       "A proposed heuristic evaluation and redesign of the Prisjakt price comparison app — identifying usability failures across navigation, homepage, and list views, then resolving them through lo-fi and hi-fi prototypes I designed.",
@@ -125,7 +125,7 @@ export const projects = [
     slug: "halo-mind",
     title: "HALO MIND",
     date: "October 2025",
-    tags: "Web Design · Developpement",
+    tags: ["Web Design", "Development"],
     align: "right",
     description:
       "Halo Mind is a mental wellness platform designed for clarity and calm. The site needed to communicate trust and approachability without feeling clinical or sterile.",
@@ -142,7 +142,7 @@ export const projects = [
     slug: "a-collective",
     title: "A COLLECTIVE",
     date: "April 2025",
-    tags: "Brand Strategy · Web Design · Development",
+    tags: ["Brand Strategy", "Web Design", "Development"],
     align: "right",
     description:
       "A Collective is a co-working studio and community platform created to bring people together. With members from diverse backgrounds and a wide range of expertise, everyone can find their own place within the community — whether you are looking for new collaborators, lifelong friends, or someone to exchange ideas with.",
@@ -162,7 +162,7 @@ export const projects = [
     slug: "pokedex-explorer",
     title: "POKÉDEX EXPLORER",
     date: "November 2025",
-    tags: "Web Development · UI Design",
+    tags: ["Web Development", "UI Design"],
     align: "right",
     description:
       "A retro-styled Pokémon encyclopedia I built showcasing all 151 original Generation 1 Pokémon. Combining Game Boy nostalgia with modern web development — powered by React and the PokéAPI.",
@@ -188,7 +188,7 @@ export const projects = [
     slug: "blg-entertainement",
     title: "BLG ENTERTAINEMENT",
     date: "October 2023",
-    tags: "Photography · Art Direction",
+    tags: ["Photography", "Art Direction"],
     align: "right",
     description:
       "Camera work & art direction for BLG Entertainment — a music house living between raw performance and curated stillness.",
