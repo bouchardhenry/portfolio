@@ -46,6 +46,24 @@
 }
 
 /* ================================
+   DARK THEME
+================================ */
+[data-theme="dark"] {
+  --color-background: #181818;
+  --color-text: #FDFCFC;
+  --color-text-muted: #6c6c6c;
+}
+
+/* ================================
+   MONOSPACED (modifier — stacks on top of light/dark)
+================================ */
+[data-mono] {
+  --font-primary: 'Courier New', Courier, monospace;
+  --font-serif: 'Courier New', Courier, monospace;
+  --font-sans: 'Courier New', Courier, monospace;
+}
+
+/* ================================
    RESET
 ================================ */
 *, *::before, *::after {

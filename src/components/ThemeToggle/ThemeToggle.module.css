@@ -1,0 +1,48 @@
+.strip {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #181818;
+  color: #FDFCFC;
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 12px 9px;
+  gap: 14px;
+  user-select: none;
+  transition: background 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:global([data-theme="light"]) .strip {
+  background: #FDFCFC;
+  color: #181818;
+}
+
+:global([data-mono]) .strip {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.option {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.45;
+  transition: opacity 150ms ease;
+  white-space: nowrap;
+}
+
+.option:hover {
+  opacity: 0.75;
+}
+
+.option.active {
+  opacity: 1;
+}
