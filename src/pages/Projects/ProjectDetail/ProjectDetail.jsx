@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { motion } from "motion/react";
 import { getProjectBySlug } from "../../../data/projects";
 import styles from "./ProjectDetail.module.css";
-import labyrinth from "../../../assets/images/thin labyrinth (1).svg";
+import labyrinth from "../../../assets/images/labyrinthlogo.svg";
 
 const normalizeImage = (img) =>
   typeof img === "string" ? { src: img, type: "normal" } : img;

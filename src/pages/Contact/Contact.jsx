@@ -1,5 +1,5 @@
 import styles from './Contact.module.css'
-import labyrinth from '../../assets/images/thin labyrinth (1).svg'
+import labyrinth from '../../assets/images/labyrinthlogo.svg'
 
 export default function Contact() {
   return (

@@ -16,8 +16,8 @@
 }
 
 .labyrinth {
-  width: 200px;
-  height: 200px;
+  width: min(35vw, 35vh);
+  height: min(35vw, 35vh);
 }
 
 /* Right side name image — absolute within .page */
@@ -38,8 +38,8 @@
   }
 
   .labyrinth {
-    width: 420px;
-    height: 420px;
+    width: min(50vw, 50vh);
+    height: min(50vw, 50vh);
   }
 
   .nameImage {
@@ -60,8 +60,8 @@
   }
 
   .labyrinth {
-    width: min(72vw, 280px);
-    height: min(72vw, 280px);
+    width: min(72vw, 72vh);
+    height: min(72vw, 72vh);
   }
 
   .nameImage {

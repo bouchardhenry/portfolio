@@ -1,26 +1,15 @@
 import { motion } from 'motion/react'
 import styles from './Home.module.css'
-import labyrinth from '../../assets/images/thin labyrinth (1).svg'
+import labyrinthlogo from '../../assets/images/labyrinthlogo.svg'
 import nameSvg from '../../assets/images/HB_rightside.png'
+import ThemeToggle from '../../components/ThemeToggle/ThemeToggle'
 
 export default function Home() {
   return (
     <div className={styles.page}>
-
-      <motion.div
-        className={styles.center}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <motion.img
-          src={labyrinth}
-          alt="labyrinth"
-          className={styles.labyrinth}
-          animate={{ rotateY: 360 }}
-          transition={{ duration: 8, ease: 'linear', repeat: Infinity }}
-        />
-      </motion.div>
+      <div className={styles.center}>
+      <img src={labyrinthlogo} alt="" className={styles.labyrinth}/>
+      </div>
 
       <motion.img
         src={nameSvg}
@@ -31,6 +20,7 @@ export default function Home() {
         transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
       />
 
+      <ThemeToggle />
     </div>
   )
 }
